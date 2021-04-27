@@ -1,11 +1,12 @@
 import React from 'react';
+import Wardrobe from "Wardrobe"
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <wardrobe />
+    <Wardrobe />
   </React.StrictMode>,
   document.getElementById('root')
 );
