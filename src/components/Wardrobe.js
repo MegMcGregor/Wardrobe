@@ -4,7 +4,6 @@ import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 
-
 export const Wardrobe = () => (
     <>
       <Route
@@ -12,7 +11,6 @@ export const Wardrobe = () => (
           if (sessionStorage.getItem("app_user_id")) {
             return (
               <>
-                <NavBar />
                 <ApplicationViews />
               </>
             )
@@ -21,7 +19,7 @@ export const Wardrobe = () => (
           }
         }}
       />
-      
+
       <Route path="/login">
         <Login />
       </Route>
