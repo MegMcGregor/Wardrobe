@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
+import { Header } from "./header/Header.js"
 
 export const Wardrobe = () => (
     <>
@@ -11,7 +12,8 @@ export const Wardrobe = () => (
           if (sessionStorage.getItem("app_user_id")) {
             return (
               <>
-                <ApplicationViews />
+                <Header />
+                {/* <ApplicationViews /> */}
               </>
             )
           } else {
