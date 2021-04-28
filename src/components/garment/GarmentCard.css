@@ -1,0 +1,43 @@
+.card-middle-border li {
+    display: block;
+    list-style-type:none;
+	padding: .5em;
+	margin: .2em;
+	font-size: .8em;
+}
+
+.card-border {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: "card-top";
+    margin: .5em;
+	max-width: 200px;
+    height: 300px;
+    border: black;
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.card-top-border img {
+    float: left;
+    margin: 1em;
+}
+
+.card-top-border span {
+    float: right;
+    margin: 1em;
+}
+
+.card-bottom-border {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+  }
