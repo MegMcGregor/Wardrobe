@@ -7,10 +7,21 @@ export const GarmentList = () => {
 
     return (
         <>
-            <h2>my wardrobe</h2>
+        <div className="main-container">
+            <div className="page-title-container">
+                <h2>
+                    my wardrobe
+                </h2>
+            </div>
             <div className="card-container">
                 <GarmentCard />
+                <GarmentCard />
+                <GarmentCard />
+                <GarmentCard />
+                <GarmentCard />
+                <GarmentCard />
             </div>
+         </div>
         </>
     )
 }
