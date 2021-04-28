@@ -12,9 +12,11 @@ export const GarmentCard = () => {
             </div>
             <div classname="card-middle-border">
                 <h3>Title</h3>
+                <ul>
                 <li>list item</li>
                 <li>list item</li>
                 <li>list item</li>
+                </ul>
             </div>
             <div className="card-bottom-border">
                 <button>details</button>
