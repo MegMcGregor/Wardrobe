@@ -20,11 +20,14 @@ export const Header = () => {
 
                 <div className="title-container">
                     <h1>Wardrobe</h1>
-                </div> 
-
-                <div className="nav-container">
-                    <nav></nav>
+                    <div className="nav-container">
+                    <nav>
+                        <li>item </li>
+                        <li>item </li>
+                        <li>item </li>
+                    </nav>
                 </div>
+                </div> 
 
             </div>
 
