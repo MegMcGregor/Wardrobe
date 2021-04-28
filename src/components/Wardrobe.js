@@ -4,7 +4,7 @@ import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Header } from "./header/Header.js"
-
+ 
 export const Wardrobe = () => (
     <>
       <Route
@@ -13,7 +13,7 @@ export const Wardrobe = () => (
             return (
               <>
                 <Header />
-                {/* <ApplicationViews /> */}
+                <ApplicationViews />
               </>
             )
           } else {
