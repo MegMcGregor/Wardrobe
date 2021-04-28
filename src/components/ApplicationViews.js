@@ -1,6 +1,7 @@
 import React from "react"
 import { Redirect, Route } from "react-router-dom";
 import { GarmentList } from "./garment/GarmentList"
+import { GarmentDetail } from "./garment/GarmentDetailCard"
 
 
 export const ApplicationViews = () => {
@@ -14,6 +15,11 @@ export const ApplicationViews = () => {
             <Route exact path="/garments">
                 < GarmentList/>
             </Route>
+
+            <Route exact path="/garment-details">
+                < GarmentDetail/>
+            </Route>
+
         </>       
     ) 
 

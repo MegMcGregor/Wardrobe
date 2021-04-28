@@ -1,0 +1,21 @@
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.detail-card-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: "card-top";
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border: black;
+    border-width: 1.5px;
+    border-style: solid;
+}
+
+.detail-info-border li {
+    display: block;
+}
