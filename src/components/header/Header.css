@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
+.top-header {
+    background-color: #173749;
+    height: 2em;
+}
+
+.top-header a {
+    color: white;
+    float: right;
+    padding: .25em;
+}
+
+.bottom-header {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-container {
+    font-family: "Rozha One", serif;
+    color: #42190d;
+    font-size: 3em;
+    flex-grow: 2;
+}
+
+.logo-container {
+    float: left;
+    margin: 1em;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 13em;
+}
+
+
+
+
+
+
+
