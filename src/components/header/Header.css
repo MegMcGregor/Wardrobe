@@ -27,7 +27,7 @@
 
 .logo-container {
     float: left;
-    margin: 1em;
+    margin-top: 1em;
     flex-grow: 1;
 }
 
@@ -45,10 +45,13 @@ li {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: .5em;
+    margin: 1em;
+    color: black;
 }
 
 nav {
     margin-bottom: 1em;
+    justify-content: space-between;
 }
 
 

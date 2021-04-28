@@ -25,6 +25,9 @@ export const Header = () => {
                         <li>item </li>
                         <li>item </li>
                         <li>item </li>
+                        <li>item </li>
+                        <li>item </li>
+                        <li>item </li>
                     </nav>
                 </div>
                 </div> 
