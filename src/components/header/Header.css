@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .top-header {
     background-color: #173749;
@@ -20,7 +21,7 @@
 .title-container {
     font-family: "Rozha One", serif;
     color: #42190d;
-    font-size: 3em;
+    font-size: 2.5em;
     flex-grow: 3;
 }
 
@@ -42,6 +43,12 @@ h1 {
 li {
     display: inline;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .5em;
+}
+
+nav {
+    margin-bottom: 1em;
 }
 
 
