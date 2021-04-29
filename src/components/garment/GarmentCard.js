@@ -2,7 +2,8 @@ import React from "react"
 import "./GarmentCard.css"
 
 
-export const GarmentCard = () => {
+export const GarmentCard = ({ garment }) => {
+
     return (
         <>
         <div className="card-border">
@@ -10,12 +11,10 @@ export const GarmentCard = () => {
                 <img className="card-icon" alt="card-icon"></img>
                 <span className="dot"></span>
             </div>
-            <div classname="card-middle-border">
-                <h3>Title</h3>
+            <div className="card-middle-border">
+                <h3>{garment.title}</h3>
                 <ul>
-                <li>list item</li>
-                <li>list item</li>
-                <li>list item</li>
+                <li>{garment.composition}</li>
                 </ul>
             </div>
             <div className="card-bottom-border">

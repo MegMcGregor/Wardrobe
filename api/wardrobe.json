@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name":"John Smith",
+      "name": "John Smith",
       "email": "johnsmith@home"
     },
     {
@@ -11,95 +11,114 @@
       "id": 2
     }
   ],
-
-  "items": [
-   
-    {"id": 0,
-    "userId": 0,
-    "colorId": 0,
-    "title": "",
-    "typeId": 0,
-    "ocassionId": 0,
-    "seasonId": 0,
-    "wearId": 0,
-    "composition": "",
-    "purchaseDateId": 0
+  "garments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "colorId": 1,
+      "title": "testestest",
+      "typeId": 1,
+      "ocassionId": 1,
+      "seasonId": 1,
+      "wearId": 1,
+      "composition": "1000% polyester",
+      "purchaseDateId": 2020
     }
   ],
-  "colors" : [
-    { "id": 1,
+  "colors": [
+    {
+      "id": 1,
       "color": "red"
     },
-    { "id": 2,
+    {
+      "id": 2,
       "color": "orange"
     },
-    { "id": 3,
+    {
+      "id": 3,
       "color": "yellow"
     },
-    { "id": 4,
+    {
+      "id": 4,
       "color": "green"
     },
-    { "id": 5,
+    {
+      "id": 5,
       "color": "blue"
     },
-    { "id": 6,
+    {
+      "id": 6,
       "color": "purple"
     },
-    { "id": 7,
+    {
+      "id": 7,
       "color": "black"
     },
-    { "id": 8,
+    {
+      "id": 8,
       "color": "white"
     }
   ],
   "occasions": [
-    {"id":1,
-     "occasion": "lounge"
+    {
+      "id": 1,
+      "occasion": "lounge"
     },
-    {"id":1,
+    {
+      "id": 1,
       "occasion": "athletic"
-     },
-     {"id":1,
+    },
+    {
+      "id": 1,
       "occasion": "formal"
-     },
-     {"id":1,
+    },
+    {
+      "id": 1,
       "occasion": "dressy"
-     },
-     {"id":1,
-       "occasion": "work"
-      },
-      {"id":1,
-       "occasion": "casual"
-      }    
+    },
+    {
+      "id": 1,
+      "occasion": "work"
+    },
+    {
+      "id": 1,
+      "occasion": "casual"
+    }
   ],
   "types": [
-    {"id":1,
+    {
+      "id": 1,
       "type": "tops"
-     },
-     {"id":2,
+    },
+    {
+      "id": 2,
       "type": "tees"
-     },
-     {"id":3,
+    },
+    {
+      "id": 3,
       "type": "shorts"
-     },
-     {"id":4,
+    },
+    {
+      "id": 4,
       "type": "skirts"
-     },
-     {"id":5,
+    },
+    {
+      "id": 5,
       "type": "pants"
-     },
-     {"id":6,
+    },
+    {
+      "id": 6,
       "type": "jeans"
-     },
-     {"id":7,
+    },
+    {
+      "id": 7,
       "type": "dresses"
-     },
-     {
-       "id":8,
+    },
+    {
+      "id": 8,
       "type": "swim"
-     }
+    }
   ],
-
   "seasons": [
     {
       "id": 1,
@@ -109,22 +128,22 @@
       "id": 2,
       "season": "autumn/winter"
     },
-    { 
+    {
       "id": 3,
-      "season": "year-round"}
+      "season": "year-round"
+    }
   ],
-
   "condition": [
     {
       "id": 1,
       "condition": "like new"
     },
     {
-      "id" : 2,
+      "id": 2,
       "condiion": "light wear"
     },
     {
-      "id" : 3,
+      "id": 3,
       "condiion": "heavy wear"
     },
     {
@@ -132,14 +151,10 @@
       "condition": "needs repair"
     }
   ],
-
   "composition": [
-
     {
-    "id": 0,
-    "composition": ""
+      "id": 0,
+      "composition": ""
     }
   ]
-  
 }
-
