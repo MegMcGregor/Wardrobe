@@ -2,6 +2,7 @@ import React from "react"
 import { Redirect, Route } from "react-router-dom";
 import { GarmentList } from "./garment/GarmentList"
 import { GarmentDetail } from "./garment/GarmentDetailCard"
+import { GarmentForm } from "./garment/GarmentForm"
 
 
 export const ApplicationViews = () => {
@@ -20,6 +21,9 @@ export const ApplicationViews = () => {
                 < GarmentDetail/>
             </Route>
 
+            <Route exact path="/garment-form">
+                < GarmentForm/>
+            </Route>
         </>       
     ) 
 
