@@ -35,7 +35,9 @@ export const GarmentList = () => {
                 </div>
                 <div className="card-container">
                     {garments.map(garment =>
-                        < GarmentCard key={garment.id} garment={garment} />
+                        < GarmentCard 
+                        key={garment.id} 
+                        garment={garment} />
                     )}
                 </div>
             </div>

@@ -1,7 +1,28 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import { getGarmentById } from "../../modules/GarmentManager"
+import { useParams, useHistory } from "react-router-dom"
 import "./GarmentDetailCard.css"
 
 export const GarmentDetail = () => {
+    const [garment, setGarment] = useState({ title: ""})
+    const [isLoading, setIsLoading] = useState(true);
+    const { garmentId } = useParams();
+    const history = useHistory();
+
+    useEffect(() => {
+        console.log("useEffect", garment)
+        getGarmentById(garmentId)
+        .then(garment => {
+            setGarment({
+                title: garment.title
+            });
+            setIsLoading(false);
+        });
+    }, [garmentId]);
+
+
+
+
     return (
         <div className="main-container">
 
@@ -15,8 +36,8 @@ export const GarmentDetail = () => {
 
                 <div className="detail-card-header-border">
                     <div className="detail-container-top-left">
-                        <span class="dot"></span>
-                        <h2>title</h2>
+                        <span className="dot"></span>
+                        <h2>{garment.title}</h2>
                     </div>
                     <div className="detail-container-top-right">
                         <img alt="clothing icon"></img>
@@ -26,10 +47,11 @@ export const GarmentDetail = () => {
 
                 <div className="detail-info-border">
                     <ul>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
+                         <li>{garment.type.type}</li>
+                        {/* <li>{garment.occcasion}</li> */}
+                        {/* <li>{garment.season}</li>
+                        <li>{garment.condition}</li>
+                        <li>{garment.composition}</li>  */}
                     </ul>
                 </div>
 
