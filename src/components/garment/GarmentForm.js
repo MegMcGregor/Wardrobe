@@ -13,12 +13,17 @@ export const GarmentForm = () => {
             <form className="form-border">
 
                 <div className="form-header-border">
-                    <span class="dot"></span>
-                    <div className="title-input">
-                        <input type="text" placeholder="title" />
+                    <div className="form-top-left">
+                        <span class="header-dot"></span>
+                        <div className="title-input">
+                            <input type="text" placeholder="title" />
+                        </div>
                     </div>
-                    <select className="image-menu">
-                    </select>
+                    <div className="form-top-right">
+                        <select className="image-menu">
+                            <option></option>
+                        </select>
+                    </div>
                 </div>
 
                 <div className="form-middle-border">
@@ -51,18 +56,18 @@ export const GarmentForm = () => {
                         </select>
 
                         <label htmlFor="compsition-input">compsition:</label>
-                        <input type="text"/>  
-                        
+                        <input type="text" />
+
                         <label htmlFor="purchase-date-select">purchase date:</label>
                         <select className="date-menu">
                             <option>date</option>
-                        </select>                      
+                        </select>
                     </div>
                 </div>
 
                 <div className="form-footer-border">
-                    <a href="/">back</a>
-                    <a href="/">save</a>
+                    <a className="form-back"href="/">back</a>
+                    <a className="form-save" href="/">save</a>
                 </div>
 
             </form>
