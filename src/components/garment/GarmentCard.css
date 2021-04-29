@@ -1,4 +1,4 @@
-.card-middle-border li {
+.card-middle-border ul {
     display: block;
     list-style-type:none;
 	padding: .5em;
@@ -9,7 +9,6 @@
 .card-border {
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: "card-top";
     margin: .5em;
 	max-width: 200px;
     height: 300px;
