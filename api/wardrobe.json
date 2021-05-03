@@ -18,11 +18,11 @@
       "colorId": 1,
       "title": "testestest",
       "typeId": 1,
-      "ocassionId": 1,
+      "occasionId": 1,
       "seasonId": 1,
-      "wearId": 1,
+      "conditionId": 1,
       "composition": "1000% polyester",
-      "purchaseDateId": 2020
+      "purchaseDate": 2020
     }
   ],
   "colors": [
@@ -133,7 +133,7 @@
       "season": "year-round"
     }
   ],
-  "condition": [
+  "conditions": [
     {
       "id": 1,
       "condition": "like new"
