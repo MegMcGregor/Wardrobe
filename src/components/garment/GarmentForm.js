@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router";
-import { addGarment } from "../../modules/GarmentManager"
-import { getAllGarments } from "../../modules/GarmentManager"
+import { addGarment, getAllGarments } from "../../modules/GarmentManager"
 import { getAllColors } from "../../modules/ColorManager"
 import { getAllTypes } from "../../modules/TypeManager"
 import { getAllOccasions } from "../../modules/OccasionManager"
 import { getAllConditions } from "../../modules/ConditionManager"
+import { getAllSeasons } from "../../modules/SeasonManager"
 import "./GarmentForm.css"
 
 export const GarmentForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const history = useHistory()
+    const userId = sessionStorage.getItem("app_user_id")
+
 
     const [garment, setGarment] = useState({
+        userId: parseInt(userId),
         title: "",
         imageId: 0,
         colorId: 0,
+        seasonId: 0,
         brand: "",
         typeId: 0,
         occasionId: 0,
@@ -30,7 +34,7 @@ export const GarmentForm = () => {
     const [occasions, setOccasions] = useState([]);
     const [dates, setDates] = useState([])
     const [conditions, setConditions] = useState([])
-
+    const [seasons, setSeasons] = useState([])
 
 
     const handleControlledInputChange = (event) => {
@@ -68,6 +72,13 @@ export const GarmentForm = () => {
             })
     }, []);
 
+    useEffect(() => {
+        getAllSeasons()
+            .then(seasonsFromAPI => {
+                setSeasons(seasonsFromAPI)
+            })
+    }, []);
+
 
 
     const handleClickSaveGarment = (event) => {
@@ -76,7 +87,12 @@ export const GarmentForm = () => {
             // const colorId = garment.colorId
             const typeId = garment.typeId;
             const conditionId = garment.conditionId
-            const occasionId = garment.occasion
+            const occasionId = garment.occasionId
+            const seasonId = garment.seasonId
+            const brand = garment.brand
+            const composition = garment.composition
+            const title = garment.title
+
             
             if (typeId === 0 || conditionId === 0 || occasionId === 0) {
                 window.alert("Please complete the form before submitting");
@@ -103,7 +119,7 @@ export const GarmentForm = () => {
                     <div className="form-top-left">
                         <span className="header-dot"></span>
                         <div className="title-input">
-                            <input type="text" placeholder="title" onChange={handleControlledInputChange} />
+                            <input type="text" id="title" placeholder="title" value={garment.title} onChange={handleControlledInputChange} />
                         </div>
                     </div>
                     <div className="form-top-right">
@@ -126,7 +142,7 @@ export const GarmentForm = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>
-                        <input id="brand" type="text" onChange={handleControlledInputChange} />
+                        <input type="text" id="brand" placeholder="brand" value={garment.brand} onChange={handleControlledInputChange} />
 
                         <label htmlFor="type-select">type:</label>
                         <select value={garment.typeId} name="typeId" id="typeId" onChange={handleControlledInputChange} className="form-menu">
@@ -134,6 +150,16 @@ export const GarmentForm = () => {
                             {types.map(type => (
                                 <option key={type.id} value={type.id}>
                                     {type.name}
+                                </option>
+                            ))}
+                        </select>
+
+                        <label htmlFor="season-select">season:</label>
+                        <select value={garment.seasonId} name="seasonId" id="seasonId" onChange={handleControlledInputChange} className="form-menu">
+                            <option value="0">select a type</option>
+                            {seasons.map(season => (
+                                <option key={season.id} value={season.id}>
+                                    {season.name}
                                 </option>
                             ))}
                         </select>
@@ -158,8 +184,8 @@ export const GarmentForm = () => {
                             ))}
                         </select>
 
-                        <label htmlFor="compsition-input">compsition:</label>
-                        <input id="compostion" type="text" />
+                        <label htmlFor="compsition-input">composition:</label>
+                        <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange}/>
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
                         <select id="purchaseDate" className="form-menu">
