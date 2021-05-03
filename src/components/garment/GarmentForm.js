@@ -115,14 +115,14 @@ export const GarmentForm = () => {
 
                 <div className="form-middle-border">
                     <div className="color-container">
-                        <span id="red" className="dot" onChange={handleControlledInputChange}></span>
-                        <span id="orange" className="dot" onChange={handleControlledInputChange}></span>
-                        <span id="yellow" className="dot" onChange={handleControlledInputChange}></span>
-                        <span id="green" className="dot" onChange={handleControlledInputChange} ></span>
-                        <span id="blue" className="dot" onChange={handleControlledInputChange} ></span>
-                        <span id="purple" className="dot" onChange={handleControlledInputChange} ></span>
-                        <span id="black" className="dot" onChange={handleControlledInputChange} ></span>
-                        <span id="white" className="dot" onChange={handleControlledInputChange} ></span>
+                        <button id="red" className="dot" onClick={handleControlledInputChange}></button>
+                        <button id="orange" className="dot" onClick={handleControlledInputChange}></button>
+                        <button id="yellow" className="dot" onClick={handleControlledInputChange}></button>
+                        <button id="green" className="dot" onClick={handleControlledInputChange} ></button>
+                        <button id="blue" className="dot" onClick={handleControlledInputChange}></button>
+                        <button id="purple" className="dot" onClick={handleControlledInputChange}></button>
+                        <button id="black" className="dot" onClick={handleControlledInputChange}></button>
+                        <button id="white" className="dot" onClick={handleControlledInputChange}></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>
