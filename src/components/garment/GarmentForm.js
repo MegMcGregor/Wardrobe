@@ -6,6 +6,7 @@ import { getAllTypes } from "../../modules/TypeManager"
 import { getAllOccasions } from "../../modules/OccasionManager"
 import { getAllConditions } from "../../modules/ConditionManager"
 import { getAllSeasons } from "../../modules/SeasonManager"
+import { getAllDates } from '../../modules/DateManager'
 import "./GarmentForm.css"
 
 export const GarmentForm = () => {
@@ -50,7 +51,6 @@ export const GarmentForm = () => {
         setGarment(newGarment)
     };
 
-
     useEffect(() => {
         getAllTypes()
             .then(typesFromAPI => {
@@ -82,25 +82,25 @@ export const GarmentForm = () => {
 
 
     const handleClickSaveGarment = (event) => {
-            event.preventDefault()
+        event.preventDefault()
 
-            // const colorId = garment.colorId
-            const typeId = garment.typeId;
-            const conditionId = garment.conditionId
-            const occasionId = garment.occasionId
-            const seasonId = garment.seasonId
-            const brand = garment.brand
-            const composition = garment.composition
-            const title = garment.title
+        // const colorId = garment.colorId
+        const typeId = garment.typeId;
+        const conditionId = garment.conditionId
+        const occasionId = garment.occasionId
+        const seasonId = garment.seasonId
+        const brand = garment.brand
+        const composition = garment.composition
+        const title = garment.title
 
-            
-            if (typeId === 0 || conditionId === 0 || occasionId === 0) {
-                window.alert("Please complete the form before submitting");
-            } else {
-                addGarment(garment)
-                    .then(() => history.push("/garments"));
-            }
+
+        if (typeId === 0 || conditionId === 0 || occasionId === 0) {
+            window.alert("Please complete the form before submitting");
+        } else {
+            addGarment(garment)
+                .then(() => history.push("/garments"));
         }
+    }
 
 
 
@@ -131,14 +131,14 @@ export const GarmentForm = () => {
 
                 <div className="form-middle-border">
                     <div className="color-container">
-                        <button id="red" className="dot" onClick={handleControlledInputChange}></button>
-                        <button id="orange" className="dot" onClick={handleControlledInputChange}></button>
-                        <button id="yellow" className="dot" onClick={handleControlledInputChange}></button>
-                        <button id="green" className="dot" onClick={handleControlledInputChange} ></button>
-                        <button id="blue" className="dot" onClick={handleControlledInputChange}></button>
-                        <button id="purple" className="dot" onClick={handleControlledInputChange}></button>
-                        <button id="black" className="dot" onClick={handleControlledInputChange}></button>
-                        <button id="white" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="red" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="orange" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="yellow" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="green" className="dot" onClick={handleControlledInputChange} ></button>
+                        <button value={garment.colorId} id="blue" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="purple" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="black" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="white" className="dot" onClick={handleControlledInputChange}></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>
@@ -185,7 +185,7 @@ export const GarmentForm = () => {
                         </select>
 
                         <label htmlFor="compsition-input">composition:</label>
-                        <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange}/>
+                        <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange} />
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
                         <select id="purchaseDate" className="form-menu">
