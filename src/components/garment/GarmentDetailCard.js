@@ -4,22 +4,23 @@ import { useParams, useHistory } from "react-router-dom";
 import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
-    const [garment, setGarment] = useState({ title: "", occasion: ""})
+    const [garment, setGarment] = useState({ title: "", composition: ""})
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
 
     useEffect(() => {
-        // console.log("useEffect", garmentId)
         getGarmentById(garmentId)
         .then(garment => {
-            setGarment({
-                title: garment.title,
-                occasion: garment.occasion
-            });
+            const garmentCopy = {...garment}
+            garmentCopy.title= garment.title
+            garmentCopy.composition = garment.composition
+            setGarment(garmentCopy);
             setIsLoading(false);
         });
     }, [garmentId]);
+    console.log(garment, "garment")
+
 
 
     return (
@@ -45,11 +46,11 @@ export const GarmentDetail = () => {
 
                 <div className="detail-info-border">
                     <ul>
-                        {/* <li>{garment.typeId}</li> */}
-                        <li>{garment.occcasion}</li>
-                        {/* <li>{garment.season}</li>
-                        <li>{garment.condition}</li>
-                        <li>{garment.composition}</li>  */}
+                        <li>{garment.type?.name}</li>
+                        <li>{garment.occcasion?.name}</li>
+                        <li>{garment.season?.name}</li>
+                        <li>{garment.condition?.name}</li> 
+                        <li>{garment.composition}</li>  
                     </ul>
                 </div>
 

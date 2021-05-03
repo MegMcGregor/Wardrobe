@@ -118,7 +118,7 @@ export const GarmentForm = () => {
                             ))}
                         </select>
 
-                        {/* <label htmlFor="occasion-select">occasion:</label>
+                        <label htmlFor="occasion-select">occasion:</label>
                         <select id="occasionId" className="menu">
                             <option>occasion</option>
                         </select>
@@ -134,7 +134,7 @@ export const GarmentForm = () => {
                         <label htmlFor="purchase-date-select">purchase date:</label>
                         <select id="purchaseDate" className="menu">
                             <option>date</option>
-                        </select> */}
+                        </select>
                     </div>
                 </div>
 
