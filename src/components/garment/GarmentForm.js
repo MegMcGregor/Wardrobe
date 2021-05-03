@@ -175,7 +175,7 @@ export const GarmentForm = () => {
                         </select>
 
                         <label htmlFor="condition-select">condition:</label>
-                        <select value={garment.conditionId} name="conditionId" id="conditionId" className="form-menu">
+                        <select value={garment.conditionId} name="conditionId" id="conditionId" className="form-menu" onChange={handleControlledInputChange}>
                             <option value="0">condition</option>
                             {conditions.map(condition => (
                                 <option key={condition.id} value={condition.id}>
