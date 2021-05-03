@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router";
 import { addGarment } from "../../modules/GarmentManager"
 import { getAllGarments } from "../../modules/GarmentManager"
+import { getAllColors } from "../../modules/ColorManager"
+import { getAllTypes } from "../../modules/TypeManager"
+import { getAllOccasions } from "../../modules/OccasionManager"
+import { getAllConditions } from "../../modules/ConditionManager"
 import "./GarmentForm.css"
 
 export const GarmentForm = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const history = useHistory()
 
     const [garment, setGarment] = useState({
         title: "",
@@ -14,17 +20,16 @@ export const GarmentForm = () => {
         typeId: 0,
         occasionId: 0,
         composition: "",
+        condition: 0,
         purchaseDate: 0
     });
 
-    const [isLoading, setIsLoading] = useState(false);
-    const history = useHistory()
-
-    // const [images, setImages] = useState([]);
-    // const [colors, setColors] = useState([]);
+    const [images, setImages] = useState([]);
+    const [colors, setColors] = useState([]);
     const [types, setTypes] = useState([]);
-    // const [occasions, setOccasions] = useState([]);
-    // const [dates, setDates] = useState([])
+    const [occasions, setOccasions] = useState([]);
+    const [dates, setDates] = useState([])
+    const [conditions, setConditions] = useState([])
 
 
 
@@ -41,10 +46,25 @@ export const GarmentForm = () => {
         setGarment(newGarment)
     };
 
+
     useEffect(() => {
-        getAllGarments()
-            .then(garmentsFromAPI => {
-                setGarment(garmentsFromAPI)
+        getAllTypes()
+            .then(typesFromAPI => {
+                setTypes(typesFromAPI)
+            })
+    }, []);
+
+    useEffect(() => {
+        getAllOccasions()
+            .then(occasionsFromAPI => {
+                setOccasions(occasionsFromAPI)
+            })
+    }, []);
+
+    useEffect(() => {
+        getAllConditions()
+            .then(conditionsFromAPI => {
+                setConditions(conditionsFromAPI)
             })
     }, []);
 
@@ -53,7 +73,7 @@ export const GarmentForm = () => {
     const handleClickSaveGarment = (event) => {
             event.preventDefault()
 
-            const colorId = garment.colorId
+            // const colorId = garment.colorId
             const typeId = garment.typeId;
             const conditionId = garment.conditionId
             const occasionId = garment.occasion
@@ -119,20 +139,30 @@ export const GarmentForm = () => {
                         </select>
 
                         <label htmlFor="occasion-select">occasion:</label>
-                        <select id="occasionId" className="menu">
-                            <option>occasion</option>
+                        <select value={garment.occasionId} name="occasionId" id="occasionId" className="form-menu" onChange={handleControlledInputChange}>
+                            <option value="0">occasion</option>
+                            {occasions.map(occasion => (
+                                <option key={occasion.id} value={occasion.id}>
+                                    {occasion.name}
+                                </option>
+                            ))}
                         </select>
 
                         <label htmlFor="condition-select">condition:</label>
-                        <select id="conditionId" className="menu">
-                            <option>condition</option>
+                        <select value={garment.conditionId} name="conditionId" id="conditionId" className="form-menu">
+                            <option value="0">condition</option>
+                            {conditions.map(condition => (
+                                <option key={condition.id} value={condition.id}>
+                                    {condition.name}
+                                </option>
+                            ))}
                         </select>
 
                         <label htmlFor="compsition-input">compsition:</label>
                         <input id="compostion" type="text" />
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
-                        <select id="purchaseDate" className="menu">
+                        <select id="purchaseDate" className="form-menu">
                             <option>date</option>
                         </select>
                     </div>

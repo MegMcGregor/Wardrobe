@@ -4,20 +4,21 @@ import { useParams, useHistory } from "react-router-dom";
 import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
-    const [garment, setGarment] = useState({ title: "", composition: ""})
+    const [garment, setGarment] = useState({ title: "", composition: "" })
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
 
     useEffect(() => {
         getGarmentById(garmentId)
-        .then(garment => {
-            const garmentCopy = {...garment}
-            garmentCopy.title= garment.title
-            garmentCopy.composition = garment.composition
-            setGarment(garmentCopy);
-            setIsLoading(false);
-        });
+            .then(garment => {
+                const garmentCopy = { ...garment }
+                garmentCopy.title = garment.title
+                garmentCopy.composition = garment.composition
+                garmentCopy.brand = garment.brand
+                setGarment(garmentCopy);
+                setIsLoading(false);
+            });
     }, [garmentId]);
     console.log(garment, "garment")
 
@@ -46,11 +47,12 @@ export const GarmentDetail = () => {
 
                 <div className="detail-info-border">
                     <ul>
+                        <li>{garment.brand}</li>
                         <li>{garment.type?.name}</li>
                         <li>{garment.occcasion?.name}</li>
                         <li>{garment.season?.name}</li>
-                        <li>{garment.condition?.name}</li> 
-                        <li>{garment.composition}</li>  
+                        <li>{garment.condition?.name}</li>
+                        <li>{garment.composition}</li>
                     </ul>
                 </div>
 
@@ -59,13 +61,13 @@ export const GarmentDetail = () => {
                         <a href="/">back</a>
                     </div>
                     <div className="detail-container-bottom-right">
-                         <a href="/">edit</a>
-                         <a href="/">delete</a>
+                        <a href="/">edit</a>
+                        <a href="/">delete</a>
                     </div>
                 </div>
 
             </div>
-            
+
         </div>
     )
 }
