@@ -28,95 +28,95 @@
   "colors": [
     {
       "id": 1,
-      "color": "red"
+      "name": "red"
     },
     {
       "id": 2,
-      "color": "orange"
+      "name": "orange"
     },
     {
       "id": 3,
-      "color": "yellow"
+      "name": "yellow"
     },
     {
       "id": 4,
-      "color": "green"
+      "name": "green"
     },
     {
       "id": 5,
-      "color": "blue"
+      "name": "blue"
     },
     {
       "id": 6,
-      "color": "purple"
+      "name": "purple"
     },
     {
       "id": 7,
-      "color": "black"
+      "name": "black"
     },
     {
       "id": 8,
-      "color": "white"
+      "name": "white"
     }
   ],
   "occasions": [
     {
       "id": 1,
-      "occasion": "lounge"
+      "name": "lounge"
     },
     {
-      "id": 1,
-      "occasion": "athletic"
+      "id": 2,
+      "name": "athletic"
     },
     {
-      "id": 1,
-      "occasion": "formal"
+      "id": 3,
+      "name": "formal"
     },
     {
-      "id": 1,
-      "occasion": "dressy"
+      "id": 4,
+      "name": "dressy"
     },
     {
-      "id": 1,
-      "occasion": "work"
+      "id": 5,
+      "name": "work"
     },
     {
-      "id": 1,
-      "occasion": "casual"
+      "id": 6,
+      "name": "casual"
     }
   ],
   "types": [
     {
       "id": 1,
-      "type": "tops"
+      "name": "tops"
     },
     {
       "id": 2,
-      "type": "tees"
+      "name": "tees"
     },
     {
       "id": 3,
-      "type": "shorts"
+      "name": "shorts"
     },
     {
       "id": 4,
-      "type": "skirts"
+      "name": "skirts"
     },
     {
       "id": 5,
-      "type": "pants"
+      "name": "pants"
     },
     {
       "id": 6,
-      "type": "jeans"
+      "name": "jeans"
     },
     {
       "id": 7,
-      "type": "dresses"
+      "name": "dresses"
     },
     {
       "id": 8,
-      "type": "swim"
+      "name": "swim"
     }
   ],
   "seasons": [

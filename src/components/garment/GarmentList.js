@@ -33,6 +33,11 @@ export const GarmentList = () => {
                         my wardrobe
                 </h2>
                 </div>
+                <div className="search-and-add">
+                    <button type="button"
+                     onClick={() => {history.push("/garments/garment-form")}}>New Item</button>
+
+                </div>
                 <div className="card-container">
                     {garments.map(garment =>
                         < GarmentCard 

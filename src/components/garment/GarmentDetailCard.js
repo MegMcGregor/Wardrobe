@@ -1,26 +1,25 @@
-import React, { useState, useEffect } from "react"
-import { getGarmentById } from "../../modules/GarmentManager"
-import { useParams, useHistory } from "react-router-dom"
-import "./GarmentDetailCard.css"
+import React, { useState, useEffect } from "react";
+import { getGarmentById } from "../../modules/GarmentManager";
+import { useParams, useHistory } from "react-router-dom";
+import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
-    const [garment, setGarment] = useState({ title: ""})
+    const [garment, setGarment] = useState({ title: "", occasion: ""})
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
 
     useEffect(() => {
-        console.log("useEffect", garment)
+        // console.log("useEffect", garmentId)
         getGarmentById(garmentId)
         .then(garment => {
             setGarment({
-                title: garment.title
+                title: garment.title,
+                occasion: garment.occasion
             });
             setIsLoading(false);
         });
     }, [garmentId]);
-
-
 
 
     return (
@@ -44,11 +43,10 @@ export const GarmentDetail = () => {
                     </div>
                 </div>
 
-
                 <div className="detail-info-border">
                     <ul>
-                         <li>{garment.type.type}</li>
-                        {/* <li>{garment.occcasion}</li> */}
+                        {/* <li>{garment.typeId}</li> */}
+                        <li>{garment.occcasion}</li>
                         {/* <li>{garment.season}</li>
                         <li>{garment.condition}</li>
                         <li>{garment.composition}</li>  */}

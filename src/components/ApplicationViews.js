@@ -21,7 +21,7 @@ export const ApplicationViews = () => {
                 < GarmentDetail/>
             </Route>
 
-            <Route exact path="/garment-form">
+            <Route exact path="/garments/garment-form">
                 < GarmentForm/>
             </Route>
         </>       

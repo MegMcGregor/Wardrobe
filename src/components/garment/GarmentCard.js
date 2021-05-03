@@ -1,5 +1,7 @@
 import React from "react"
 import "./GarmentCard.css"
+import { Link } from "react-router-dom";
+
 
 
 export const GarmentCard = ({ garment }) => {
@@ -18,7 +20,9 @@ export const GarmentCard = ({ garment }) => {
                 </ul>
             </div>
             <div className="card-bottom-border">
+            <Link to={`/garments/${garment.id}`}>
                 <button>details</button>
+            </Link>
             </div>
         </div>
         </>
