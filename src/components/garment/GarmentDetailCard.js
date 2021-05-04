@@ -4,22 +4,24 @@ import { useParams, useHistory } from "react-router-dom";
 import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
-    const [garment, setGarment] = useState({ title: "", occasion: ""})
+    const [garment, setGarment] = useState({ title: "", composition: "", brand:""})
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
 
     useEffect(() => {
-        // console.log("useEffect", garmentId)
         getGarmentById(garmentId)
-        .then(garment => {
-            setGarment({
-                title: garment.title,
-                occasion: garment.occasion
+            .then(garment => {
+                const garmentCopy = { ...garment }
+                garmentCopy.title = garment.title
+                garmentCopy.composition = garment.composition
+                garmentCopy.brand = garment.brand
+                setGarment(garmentCopy);
+                setIsLoading(false);
             });
-            setIsLoading(false);
-        });
     }, [garmentId]);
+    console.log(garment, "garment")
+
 
 
     return (
@@ -45,11 +47,12 @@ export const GarmentDetail = () => {
 
                 <div className="detail-info-border">
                     <ul>
-                        {/* <li>{garment.typeId}</li> */}
-                        <li>{garment.occcasion}</li>
-                        {/* <li>{garment.season}</li>
-                        <li>{garment.condition}</li>
-                        <li>{garment.composition}</li>  */}
+                        <li>{garment.brand}</li>
+                        <li>{garment.type?.name}</li>
+                        <li>{garment.occcasion?.name}</li>
+                        <li>{garment.season?.name}</li>
+                        <li>{garment.condition?.name}</li>
+                        <li>{garment.composition}</li>
                     </ul>
                 </div>
 
@@ -58,13 +61,13 @@ export const GarmentDetail = () => {
                         <a href="/">back</a>
                     </div>
                     <div className="detail-container-bottom-right">
-                         <a href="/">edit</a>
-                         <a href="/">delete</a>
+                        <a href="/">edit</a>
+                        <a href="/">delete</a>
                     </div>
                 </div>
 
             </div>
-            
+
         </div>
     )
 }
