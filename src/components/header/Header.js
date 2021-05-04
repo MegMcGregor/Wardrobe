@@ -22,11 +22,11 @@ export const Header = () => {
                     <h1>Wardrobe</h1>
                     <div className="nav-container">
                     <nav>
-                        <li>item </li>
-                        <li>item </li>
-                        <li>item </li>
-                        <li>item </li>
-                        <li>item </li>
+                        <li>add an item </li>
+                        <li>reports </li>
+                        <li>types</li>
+                        <li>occasions</li>
+                        <li>seasons</li>
                     </nav>
                 </div>
                 </div> 
