@@ -9,17 +9,14 @@ export const GarmentList = () => {
 
     let history = useHistory();
 
-    /////////variables\\\\\\\\\\\\\\\
     const [garments, setGarments] = useState([]);
 
-    ///////////get garments\\\\\\\\\\\\\\\\\\\
     const getGarments = () => {
         return getAllGarments().then(garmentsFromAPI => {
             setGarments(garmentsFromAPI);
         });
     };
 
-    //////////////////use effect\\\\\\\\\\\\\\\\
     useEffect(() => {
         getGarments();
     }, []);
