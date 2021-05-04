@@ -25,7 +25,7 @@ export const GarmentForm = () => {
         typeId: 0,
         occasionId: 0,
         composition: "",
-        condition: 0,
+        conditionId: 0,
         purchaseDate: 0
     });
 
@@ -50,6 +50,8 @@ export const GarmentForm = () => {
         newGarment[event.target.id] = selectedVal
         setGarment(newGarment)
     };
+
+
 
     useEffect(() => {
         getAllTypes()
@@ -79,6 +81,13 @@ export const GarmentForm = () => {
             })
     }, []);
 
+    useEffect(() => {
+        getAllDates()
+            .then(datesFromAPI => {
+                setSeasons(datesFromAPI)
+            })
+    }, []);
+
 
 
     const handleClickSaveGarment = (event) => {
@@ -88,6 +97,7 @@ export const GarmentForm = () => {
         const typeId = garment.typeId;
         const conditionId = garment.conditionId
         const occasionId = garment.occasionId
+        const purchaseDate = garment.purchaseDate
         const seasonId = garment.seasonId
         const brand = garment.brand
         const composition = garment.composition
@@ -131,14 +141,14 @@ export const GarmentForm = () => {
 
                 <div className="form-middle-border">
                     <div className="color-container">
-                        <button value={garment.colorId} id="red" className="dot" onClick={handleControlledInputChange}></button>
-                        <button value={garment.colorId} id="orange" className="dot" onClick={handleControlledInputChange}></button>
-                        <button value={garment.colorId} id="yellow" className="dot" onClick={handleControlledInputChange}></button>
-                        <button value={garment.colorId} id="green" className="dot" onClick={handleControlledInputChange} ></button>
-                        <button value={garment.colorId} id="blue" className="dot" onClick={handleControlledInputChange}></button>
-                        <button value={garment.colorId} id="purple" className="dot" onClick={handleControlledInputChange}></button>
-                        <button value={garment.colorId} id="black" className="dot" onClick={handleControlledInputChange}></button>
-                        <button value={garment.colorId} id="white" className="dot" onClick={handleControlledInputChange}></button>
+                        <button value={garment.colorId} id="red" className="dot"></button>
+                        <button value={garment.colorId} id="orange" className="dot"></button>
+                        <button value={garment.colorId} id="yellow" className="dot"></button>
+                        <button value={garment.colorId} id="green" className="dot"></button>
+                        <button value={garment.colorId} id="blue" className="dot"></button>
+                        <button value={garment.colorId} id="purple" className="dot"></button>
+                        <button value={garment.colorId} id="black" className="dot"></button>
+                        <button value={garment.colorId} id="white" className="dot"></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>

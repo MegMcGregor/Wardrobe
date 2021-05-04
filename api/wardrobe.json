@@ -15,7 +15,9 @@
     {
       "id": 1,
       "userId": 2,
+      "imageId": 0,
       "colorId": 1,
+      "brand": "GapFit",
       "title": "testestest",
       "typeId": 1,
       "occasionId": 1,
@@ -23,6 +25,21 @@
       "conditionId": 1,
       "composition": "1000% polyester",
       "purchaseDate": 2020
+    },
+    {
+      "userId": 2,
+      "title": "top",
+      "imageId": 0,
+      "colorId": 0,
+      "seasonId": 1,
+      "brand": "zara",
+      "typeId": 2,
+      "occasionId": 2,
+      "composition": "100% cotton",
+      "condition": 0,
+      "purchaseDate": 0,
+      "conditionId": 2,
+      "id": 2
     }
   ],
   "colors": [
@@ -122,39 +139,56 @@
   "seasons": [
     {
       "id": 1,
-      "season": "spring/summer"
+      "name": "spring/summer"
     },
     {
       "id": 2,
-      "season": "autumn/winter"
+      "name": "autumn/winter"
     },
     {
       "id": 3,
-      "season": "year-round"
+      "name": "year-round"
     }
   ],
   "conditions": [
     {
       "id": 1,
-      "condition": "like new"
+      "name": "like new"
     },
     {
       "id": 2,
-      "condiion": "light wear"
+      "name": "light wear"
     },
     {
       "id": 3,
-      "condiion": "heavy wear"
+      "name": "heavy wear"
     },
     {
       "id": 4,
-      "condition": "needs repair"
+      "name": "needs repair"
     }
   ],
-  "composition": [
+  "purhcaseDates": [
     {
-      "id": 0,
-      "composition": ""
+      "date": 2021
+    },
+    {
+      "date": 2020
+    },
+    {
+      "date": 2019
+    },
+    {
+      "date": 2018
+    },
+    {
+      "date": 2017
+    },
+    {
+      "date": 2016
+    },
+    {
+      "date": 2015
     }
   ]
 }

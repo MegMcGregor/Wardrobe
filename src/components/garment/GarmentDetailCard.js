@@ -4,7 +4,7 @@ import { useParams, useHistory } from "react-router-dom";
 import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
-    const [garment, setGarment] = useState({ title: "", composition: "" })
+    const [garment, setGarment] = useState({ title: "", composition: "", brand:""})
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
