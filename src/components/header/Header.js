@@ -1,5 +1,8 @@
 import React from "react"
 import "./Header.css" 
+import { getAllTypes } from "../../modules/TypeManager"
+import { getAllOccasions } from "../../modules/OccasionManager"
+import { getAllSeasons } from "../../modules/SeasonManager"
 import img from "./Wardrobe.png"
 
 export const Header = () => {
