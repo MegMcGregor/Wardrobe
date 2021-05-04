@@ -22,6 +22,14 @@ export const Header = () => {
                     <h1>Wardrobe</h1>
                     <div className="nav-container">
                     <nav>
+
+                    {/* export const toppingsDropdown = (allToppings) => {
+	const dropdown = document.getElementById("toppingsDropdown")
+	let options = allToppings.map(singleTopping => {
+		return `<option value="${singleTopping.id}">${singleTopping.name}</option>`
+	}) 
+	dropdown.innerHTML += options */}
+
                         <li>item </li>
                         <li>item </li>
                         <li>item </li>

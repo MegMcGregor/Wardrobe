@@ -6,6 +6,10 @@
 	font-size: .8em;
 }
 
+img {
+    width: 4em;
+}
+
 .card-border {
     box-sizing: border-box;
     display: grid;
@@ -18,12 +22,12 @@
 }
 
 .card-top-border img {
-    float: left;
+    float: right;
     margin: 1em;
 }
 
 .card-top-border span {
-    float: right;
+    float: left;
     margin: 1em;
 }
 

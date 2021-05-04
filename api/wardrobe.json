@@ -15,146 +15,180 @@
     {
       "id": 1,
       "userId": 2,
+      "imageId": 0,
       "colorId": 1,
+      "brand": "GapFit",
       "title": "testestest",
       "typeId": 1,
-      "ocassionId": 1,
+      "occasionId": 1,
       "seasonId": 1,
-      "wearId": 1,
+      "conditionId": 1,
       "composition": "1000% polyester",
-      "purchaseDateId": 2020
+      "purchaseDate": 2020
+    },
+    {
+      "userId": 2,
+      "title": "top",
+      "imageId": 0,
+      "colorId": 0,
+      "seasonId": 1,
+      "brand": "zara",
+      "typeId": 2,
+      "occasionId": 2,
+      "composition": "100% cotton",
+      "condition": 0,
+      "purchaseDate": 0,
+      "conditionId": 2,
+      "id": 2
     }
   ],
   "colors": [
     {
       "id": 1,
-      "color": "red"
+      "name": "red"
     },
     {
       "id": 2,
-      "color": "orange"
+      "name": "orange"
     },
     {
       "id": 3,
-      "color": "yellow"
+      "name": "yellow"
     },
     {
       "id": 4,
-      "color": "green"
+      "name": "green"
     },
     {
       "id": 5,
-      "color": "blue"
+      "name": "blue"
     },
     {
       "id": 6,
-      "color": "purple"
+      "name": "purple"
     },
     {
       "id": 7,
-      "color": "black"
+      "name": "black"
     },
     {
       "id": 8,
-      "color": "white"
+      "name": "white"
     }
   ],
   "occasions": [
     {
       "id": 1,
-      "occasion": "lounge"
+      "name": "lounge"
     },
     {
-      "id": 1,
-      "occasion": "athletic"
+      "id": 2,
+      "name": "athletic"
     },
     {
-      "id": 1,
-      "occasion": "formal"
+      "id": 3,
+      "name": "formal"
     },
     {
-      "id": 1,
-      "occasion": "dressy"
+      "id": 4,
+      "name": "dressy"
     },
     {
-      "id": 1,
-      "occasion": "work"
+      "id": 5,
+      "name": "work"
     },
     {
-      "id": 1,
-      "occasion": "casual"
+      "id": 6,
+      "name": "casual"
     }
   ],
   "types": [
     {
       "id": 1,
-      "type": "tops"
+      "name": "tops"
     },
     {
       "id": 2,
-      "type": "tees"
+      "name": "tees"
     },
     {
       "id": 3,
-      "type": "shorts"
+      "name": "shorts"
     },
     {
       "id": 4,
-      "type": "skirts"
+      "name": "skirts"
     },
     {
       "id": 5,
-      "type": "pants"
+      "name": "pants"
     },
     {
       "id": 6,
-      "type": "jeans"
+      "name": "jeans"
     },
     {
       "id": 7,
-      "type": "dresses"
+      "name": "dresses"
     },
     {
       "id": 8,
-      "type": "swim"
+      "name": "swim"
     }
   ],
   "seasons": [
     {
       "id": 1,
-      "season": "spring/summer"
+      "name": "spring/summer"
     },
     {
       "id": 2,
-      "season": "autumn/winter"
+      "name": "autumn/winter"
     },
     {
       "id": 3,
-      "season": "year-round"
+      "name": "year-round"
     }
   ],
-  "condition": [
+  "conditions": [
     {
       "id": 1,
-      "condition": "like new"
+      "name": "like new"
     },
     {
       "id": 2,
-      "condiion": "light wear"
+      "name": "light wear"
     },
     {
       "id": 3,
-      "condiion": "heavy wear"
+      "name": "heavy wear"
     },
     {
       "id": 4,
-      "condition": "needs repair"
+      "name": "needs repair"
     }
   ],
-  "composition": [
+  "purhcaseDates": [
     {
-      "id": 0,
-      "composition": ""
+      "date": 2021
+    },
+    {
+      "date": 2020
+    },
+    {
+      "date": 2019
+    },
+    {
+      "date": 2018
+    },
+    {
+      "date": 2017
+    },
+    {
+      "date": 2016
+    },
+    {
+      "date": 2015
     }
   ]
 }
