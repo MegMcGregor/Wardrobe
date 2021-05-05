@@ -30,6 +30,7 @@ export const GarmentForm = () => {
     });
 
     const [images, setImages] = useState([]);
+    const [selectedColor, setSelectedColor] = useState([]);
     const [colors, setColors] = useState([]);
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
@@ -51,10 +52,12 @@ export const GarmentForm = () => {
         setGarment(newGarment)
     };
 
+
     const handleColorChange = (event) => {
         event.preventDefault()
         const selectedColor = event.target.id
-        console.log(selectedColor)
+        setSelectedColor(selectedColor)
+        
     }
 
 
@@ -140,7 +143,7 @@ export const GarmentForm = () => {
 
                 <div className="form-header-border">
                     <div className="form-top-left">
-                        <span className="header-dot"></span>
+                        <span className="header-dot" id={selectedColor}></span>
                         <div className="title-input">
                             <input type="text" id="title" placeholder="title" value={garment.title} onChange={handleControlledInputChange} />
                         </div>
@@ -155,13 +158,13 @@ export const GarmentForm = () => {
                 <div className="form-middle-border">
                     <div className="color-container">
                         <button id="red" className="dot" onClick={handleColorChange}></button>
-                        <button id="orange" className="dot"></button>
-                        <button id="yellow" className="dot"></button>
-                        <button id="green" className="dot"></button>
-                        <button id="blue" className="dot"></button>
-                        <button id="purple" className="dot"></button>
-                        <button id="black" className="dot"></button>
-                        <button id="white" className="dot"></button>
+                        <button id="orange" className="dot" onClick={handleColorChange}></button>
+                        <button id="yellow" className="dot" onClick={handleColorChange}></button>
+                        <button id="green" className="dot" onClick={handleColorChange}></button>
+                        <button id="blue" className="dot" onClick={handleColorChange}></button>
+                        <button id="purple" className="dot" onClick={handleColorChange}></button>
+                        <button id="black" className="dot" onClick={handleColorChange}></button>
+                        <button id="white" className="dot"onClick={handleColorChange}></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>
@@ -211,7 +214,7 @@ export const GarmentForm = () => {
                         <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange} />
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
-                        <select value={garment.purchaseDateId} id="purchaseDate" className="form-menu" onChange={handleControlledInputChange}>
+                        <select value={garment.purchaseDateId} id="purchaseDateId" className="form-menu" onChange={handleControlledInputChange}>
                             <option>date</option>
                             {purchaseDates.map(purchaseDate => (
                                 <option key={purchaseDate.id} value={purchaseDate.id}>

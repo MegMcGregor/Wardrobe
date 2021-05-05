@@ -40,6 +40,49 @@
       "purchaseDateId": 2,
       "conditionId": 2,
       "id": 2
+    },
+    {
+      "userId": 2,
+      "title": "running shorts",
+      "imageId": 0,
+      "colorId": 0,
+      "seasonId": 1,
+      "brand": "outdoor voices",
+      "typeId": 3,
+      "occasionId": 2,
+      "composition": "100% lycra",
+      "conditionId": 2,
+      "purchaseDateId": 0,
+      "purchaseDate": "6",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "title": "hudson shorts",
+      "imageId": 0,
+      "colorId": 0,
+      "seasonId": 1,
+      "brand": "outdoor voices",
+      "typeId": 3,
+      "occasionId": 2,
+      "composition": "100% cotton",
+      "conditionId": 2,
+      "purchaseDateId": 2,
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "title": "smocked blouse",
+      "imageId": 0,
+      "colorId": 0,
+      "seasonId": 3,
+      "brand": "current elliot",
+      "typeId": 1,
+      "occasionId": 6,
+      "composition": "100% cotton",
+      "conditionId": 2,
+      "purchaseDateId": 4,
+      "id": 5
     }
   ],
   "colors": [
@@ -169,16 +212,20 @@
     }
   ],
   "purhcaseDates": [
-    { "id": 1,
+    {
+      "id": 1,
       "purchaseDate": "2021"
     },
-    { "id": 2,
+    {
+      "id": 2,
       "purchaseDate": "2020"
     },
-    { "id": 3,
+    {
+      "id": 3,
       "purchaseDate": "2019"
     },
-    { "id": 4,
+    {
+      "id": 4,
       "purchaseDate": "2018"
     },
     {
@@ -186,14 +233,14 @@
       "purchaseDate": "2017"
     },
     {
-       "id": 6,
+      "id": 6,
       "purchaseDate": "2016"
     },
     {
       "id": 7,
       "purchaseDate": "2015"
     },
-    { 
+    {
       "id": 8,
       "purchaseDate": "2014"
     },
@@ -201,10 +248,9 @@
       "id": 9,
       "purchaseDate": "2013"
     },
-    { 
+    {
       "id": 10,
       "purchaseDate": "2012"
     }
-
   ]
 }
