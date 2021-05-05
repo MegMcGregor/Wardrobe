@@ -1,10 +1,47 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
+import { withRouter } from "react-router-dom"
 import "./Header.css" 
+import { getAllTypes } from "../../modules/TypeManager"
+import { getAllOccasions } from "../../modules/OccasionManager"
+import { getAllSeasons } from "../../modules/SeasonManager"
+import { Link } from "react-router-dom"
 import img from "./Wardrobe.png"
 
 export const Header = () => {
+    const [types, setTypes] = useState([]);
+    const [occasions, setOccasions] = useState([]);
+    const [seasons, setSeasons] = useState([])
+
+
+    // .then(() =>  history.push("/garments/${season.name}"))
+
+
+    useEffect(() => {
+        getAllSeasons()
+            .then(seasonsFromAPI => {
+                setSeasons(seasonsFromAPI)
+            })
+    }, []);
+
+    useEffect(() => {
+        getAllOccasions()
+            .then(occasionsFromAPI => {
+                setOccasions(occasionsFromAPI)
+            })
+    }, []);
+
+    useEffect(() => {
+        getAllTypes()
+            .then(typesFromAPI => {
+                setTypes(typesFromAPI)
+            })
+    }, []);
+
+
+
     return (
         <>
+
         <div className="header-container">
 
             <div className="top-header">
@@ -22,19 +59,32 @@ export const Header = () => {
                     <h1>Wardrobe</h1>
                     <div className="nav-container">
                     <nav>
-
-                    {/* export const toppingsDropdown = (allToppings) => {
-	const dropdown = document.getElementById("toppingsDropdown")
-	let options = allToppings.map(singleTopping => {
-		return `<option value="${singleTopping.id}">${singleTopping.name}</option>`
-	}) 
-	dropdown.innerHTML += options */}
-
-                        <li>item </li>
-                        <li>item </li>
-                        <li>item </li>
-                        <li>item </li>
-                        <li>item </li>
+                        <li>add an item </li>
+                        <li>reports </li>
+                        <select>
+                            <option value="0">type</option>
+                            {types.map(type => (
+                                <option key={type.id} value={type.id}>
+                                    {type.name}
+                                </option>
+                            ))}
+                        </select>
+                        <select>
+                            <option value="0">occasion</option>
+                            {occasions.map(occasion => (
+                                <option key={occasion.id} value={occasion.id}>
+                                    {occasion.name}
+                                </option>
+                            ))}
+                        </select>
+                        <select value="0">
+                            <option value="0">sesason</option>
+                            {seasons.map(season => (
+                                <option key={season.id} value={season.id}>
+                                    {season.name}
+                                </option>
+                            ))}
+                        </select>
                     </nav>
                 </div>
                 </div> 

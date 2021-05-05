@@ -1,11 +1,11 @@
 import React, { useState, useEffect}  from "react"
-import { GarmentCard } from "./GarmentCard"
+import { GarmentCard } from "../garment/GarmentCard"
 import { useHistory } from "react-router-dom"
-import { getAllGarments, getGarmentById } from "../../modules/GarmentManager"
-import "./GarmentList.css"
+import { getAllGarments } from "../../modules/GarmentManager"
+import "../garment/GarmentList.css"
 
 
-export const GarmentList = () => {
+export const AthleticList = () => {
 
     let history = useHistory();
 
@@ -27,13 +27,8 @@ export const GarmentList = () => {
             <div className="main-container">
                 <div className="page-title-container">
                     <h2>
-                        my wardrobe
+                        athletic
                 </h2>
-                </div>
-                <div className="search-and-add">
-                    <button type="button"
-                     onClick={() => {history.push("/garments/garment-form")}}>New Item</button>
-
                 </div>
                 <div className="card-container">
                     {garments.map(garment =>

@@ -6,7 +6,7 @@ import { getAllTypes } from "../../modules/TypeManager"
 import { getAllOccasions } from "../../modules/OccasionManager"
 import { getAllConditions } from "../../modules/ConditionManager"
 import { getAllSeasons } from "../../modules/SeasonManager"
-import { getAllDates } from '../../modules/DateManager'
+import { getAllPurchaseDates } from '../../modules/DateManager'
 import "./GarmentForm.css"
 
 export const GarmentForm = () => {
@@ -26,14 +26,14 @@ export const GarmentForm = () => {
         occasionId: 0,
         composition: "",
         conditionId: 0,
-        purchaseDate: 0
+        purchaseDateId: 0
     });
 
     const [images, setImages] = useState([]);
     const [colors, setColors] = useState([]);
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
-    const [dates, setDates] = useState([])
+    const [purchaseDates, setPurchaseDates] = useState([])
     const [conditions, setConditions] = useState([])
     const [seasons, setSeasons] = useState([])
 
@@ -51,6 +51,35 @@ export const GarmentForm = () => {
         setGarment(newGarment)
     };
 
+    const handleColorChange = (event) => {
+        event.preventDefault()
+        const selectedColor = event.target.id
+        console.log(selectedColor)
+    }
+
+
+    const handleClickSaveGarment = (event) => {
+        event.preventDefault()
+
+        // const colorId = garment.colorId
+        const typeId = garment.typeId;
+        const conditionId = garment.conditionId
+        const occasionId = garment.occasionId
+        const purchaseDate = garment.purchaseDateId
+        const seasonId = garment.seasonId
+        const brand = garment.brand
+        const composition = garment.composition
+        const title = garment.title
+
+
+        if (typeId === 0 || conditionId === 0 || occasionId === 0) {
+            window.alert("Please complete the form before submitting");
+        } else {
+            addGarment(garment)
+                .then(() => history.push("/garments"));
+        }
+    }
+
 
 
     useEffect(() => {
@@ -59,6 +88,14 @@ export const GarmentForm = () => {
                 setTypes(typesFromAPI)
             })
     }, []);
+
+    useEffect(() => {
+        getAllColors()
+            .then(colorsFromAPI => {
+                setColors(colorsFromAPI)
+            })
+    }, []);
+
 
     useEffect(() => {
         getAllOccasions()
@@ -82,35 +119,11 @@ export const GarmentForm = () => {
     }, []);
 
     useEffect(() => {
-        getAllDates()
+        getAllPurchaseDates()
             .then(datesFromAPI => {
-                setSeasons(datesFromAPI)
+                setPurchaseDates(datesFromAPI)
             })
     }, []);
-
-
-
-    const handleClickSaveGarment = (event) => {
-        event.preventDefault()
-
-        // const colorId = garment.colorId
-        const typeId = garment.typeId;
-        const conditionId = garment.conditionId
-        const occasionId = garment.occasionId
-        const purchaseDate = garment.purchaseDate
-        const seasonId = garment.seasonId
-        const brand = garment.brand
-        const composition = garment.composition
-        const title = garment.title
-
-
-        if (typeId === 0 || conditionId === 0 || occasionId === 0) {
-            window.alert("Please complete the form before submitting");
-        } else {
-            addGarment(garment)
-                .then(() => history.push("/garments"));
-        }
-    }
 
 
 
@@ -141,14 +154,14 @@ export const GarmentForm = () => {
 
                 <div className="form-middle-border">
                     <div className="color-container">
-                        <button value={garment.colorId} id="red" className="dot"></button>
-                        <button value={garment.colorId} id="orange" className="dot"></button>
-                        <button value={garment.colorId} id="yellow" className="dot"></button>
-                        <button value={garment.colorId} id="green" className="dot"></button>
-                        <button value={garment.colorId} id="blue" className="dot"></button>
-                        <button value={garment.colorId} id="purple" className="dot"></button>
-                        <button value={garment.colorId} id="black" className="dot"></button>
-                        <button value={garment.colorId} id="white" className="dot"></button>
+                        <button id="red" className="dot" onClick={handleColorChange}></button>
+                        <button id="orange" className="dot"></button>
+                        <button id="yellow" className="dot"></button>
+                        <button id="green" className="dot"></button>
+                        <button id="blue" className="dot"></button>
+                        <button id="purple" className="dot"></button>
+                        <button id="black" className="dot"></button>
+                        <button id="white" className="dot"></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>
@@ -198,8 +211,13 @@ export const GarmentForm = () => {
                         <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange} />
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
-                        <select id="purchaseDate" className="form-menu">
+                        <select value={garment.purchaseDateId} id="purchaseDate" className="form-menu" onChange={handleControlledInputChange}>
                             <option>date</option>
+                            {purchaseDates.map(purchaseDate => (
+                                <option key={purchaseDate.id} value={purchaseDate.id}>
+                                    {purchaseDate.purchaseDate}
+                                </option>
+                            ))}
                         </select>
                     </div>
                 </div>
