@@ -170,25 +170,25 @@
   ],
   "purhcaseDates": [
     {
-      "date": 2021
+      "purchaseDate": 2021
     },
     {
-      "date": 2020
+      "purchaseDate": 2020
     },
     {
-      "date": 2019
+      "purchaseDate": 2019
     },
     {
-      "date": 2018
+      "purchaseDate": 2018
     },
     {
-      "date": 2017
+      "purchaseDate": 2017
     },
     {
-      "date": 2016
+      "purchaseDate": 2016
     },
     {
-      "date": 2015
+      "purchaseDate": 2015
     }
   ]
 }

@@ -6,7 +6,7 @@ import { getAllTypes } from "../../modules/TypeManager"
 import { getAllOccasions } from "../../modules/OccasionManager"
 import { getAllConditions } from "../../modules/ConditionManager"
 import { getAllSeasons } from "../../modules/SeasonManager"
-import { getAllDates } from '../../modules/DateManager'
+import { getAllPurchaseDates } from '../../modules/DateManager'
 import "./GarmentForm.css"
 
 export const GarmentForm = () => {
@@ -33,7 +33,7 @@ export const GarmentForm = () => {
     const [colors, setColors] = useState([]);
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
-    const [dates, setDates] = useState([])
+    const [purchaseDates, setPurchaseDates] = useState([])
     const [conditions, setConditions] = useState([])
     const [seasons, setSeasons] = useState([])
 
@@ -119,9 +119,9 @@ export const GarmentForm = () => {
     }, []);
 
     useEffect(() => {
-        getAllDates()
+        getAllPurchaseDates()
             .then(datesFromAPI => {
-                setSeasons(datesFromAPI)
+                setPurchaseDates(datesFromAPI)
             })
     }, []);
 
@@ -211,8 +211,13 @@ export const GarmentForm = () => {
                         <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange} />
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
-                        <select id="purchaseDate" className="form-menu">
+                        <select value={garment.purchaseDate} id="purchaseDate" className="form-menu" onChange={handleControlledInputChange}>
                             <option>date</option>
+                            {purchaseDates.map(date => (
+                                <option key={purchaseDate} value={purchaseDate}>
+                                    {purchaseDate}
+                                </option>
+                            ))}
                         </select>
                     </div>
                 </div>
