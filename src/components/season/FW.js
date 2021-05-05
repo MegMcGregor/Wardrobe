@@ -18,12 +18,10 @@ export const FallWinterList = () => {
     };
 
     const getFilteredGarments = () => {
-        getGarments().filter(garment => {
-          if  (garment.seasonId === 2)
-          return garment)
-    }
     
+    let targetGarment=garments.filter(garment => garment.seasonId === 2)
 
+    }
 
     useEffect(() => {
         getFilteredGarments();
