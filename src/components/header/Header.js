@@ -12,6 +12,8 @@ export const Header = () => {
     const [occasions, setOccasions] = useState([]);
     const [seasons, setSeasons] = useState([])
 
+    //move states and use effects to wardrobe.js
+
 
     // .then(() =>  history.push("/garments/${season.name}"))
 

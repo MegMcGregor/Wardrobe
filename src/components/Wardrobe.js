@@ -5,7 +5,10 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Header } from "./header/Header.js"
  
-export const Wardrobe = () => (
+export const Wardrobe = () => {
+// keep track of selection from headaer and pass value into application views
+//state v
+  return (
     <>
       <Route
         render={() => {
@@ -28,5 +31,5 @@ export const Wardrobe = () => (
       <Route path="/register">
         <Register />
       </Route>
-    </>
-  )
+    </>)
+    }

@@ -137,10 +137,10 @@ export const GarmentForm = () => {
                 </h2>
             </div>
             <form className="form-border">
-
+            {/* value={selectedColor} */}
                 <div className="form-header-border">
                     <div className="form-top-left">
-                        <span className="header-dot"></span>
+                        <span className="header-dot" ></span>
                         <div className="title-input">
                             <input type="text" id="title" placeholder="title" value={garment.title} onChange={handleControlledInputChange} />
                         </div>
