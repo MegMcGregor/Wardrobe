@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { withRouter } from "react-router-dom"
 import "./Header.css" 
 import { getAllTypes } from "../../modules/TypeManager"
 import { getAllOccasions } from "../../modules/OccasionManager"
@@ -11,34 +10,27 @@ export const Header = () => {
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [seasons, setSeasons] = useState([])
-
-    //move states and use effects to wardrobe.js
-
-
-    // .then(() =>  history.push("/garments/${season.name}"))
-
-
+  
     useEffect(() => {
-        getAllSeasons()
-            .then(seasonsFromAPI => {
-                setSeasons(seasonsFromAPI)
-            })
-    }, []);
-
-    useEffect(() => {
-        getAllOccasions()
-            .then(occasionsFromAPI => {
-                setOccasions(occasionsFromAPI)
-            })
-    }, []);
-
-    useEffect(() => {
-        getAllTypes()
-            .then(typesFromAPI => {
-                setTypes(typesFromAPI)
-            })
-    }, []);
-
+      getAllSeasons()
+          .then(seasonsFromAPI => {
+              setSeasons(seasonsFromAPI)
+          })
+  }, []);
+  
+  useEffect(() => {
+      getAllOccasions()
+          .then(occasionsFromAPI => {
+              setOccasions(occasionsFromAPI)
+          })
+  }, []);
+  
+  useEffect(() => {
+      getAllTypes()
+          .then(typesFromAPI => {
+              setTypes(typesFromAPI)
+          })
+  }, []);
 
 
     return (

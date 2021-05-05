@@ -4,6 +4,9 @@ import { GarmentList } from "./garment/GarmentList"
 import { GarmentDetail } from "./garment/GarmentDetailCard"
 import { GarmentForm } from "./garment/GarmentForm"
 
+// keep track of selection from headaer and pass value into application views
+
+
 
 export const ApplicationViews = () => {
 

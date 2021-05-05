@@ -1,13 +1,40 @@
-import React from "react"
+import React, { useState, useEffect }from "react"
 import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
+// import { getAllTypes } from "../modules/TypeManager"
+// import { getAllOccasions } from "../modules/OccasionManager"
+// import { getAllSeasons } from "../modules/SeasonManager"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Header } from "./header/Header.js"
  
 export const Wardrobe = () => {
-// keep track of selection from headaer and pass value into application views
-//state v
+
+//   const [types, setTypes] = useState([]);
+//   const [occasions, setOccasions] = useState([]);
+//   const [seasons, setSeasons] = useState([])
+
+//   useEffect(() => {
+//     getAllSeasons()
+//         .then(seasonsFromAPI => {
+//             setSeasons(seasonsFromAPI)
+//         })
+// }, []);
+
+// useEffect(() => {
+//     getAllOccasions()
+//         .then(occasionsFromAPI => {
+//             setOccasions(occasionsFromAPI)
+//         })
+// }, []);
+
+// useEffect(() => {
+//     getAllTypes()
+//         .then(typesFromAPI => {
+//             setTypes(typesFromAPI)
+//         })
+// }, []);
+
   return (
     <>
       <Route
@@ -16,7 +43,11 @@ export const Wardrobe = () => {
             return (
               <>
                 <Header />
-                <ApplicationViews />
+                <ApplicationViews
+                // key={types.id}
+                // key={occasions.id}
+                // key={seasons.id}
+                 />
               </>
             )
           } else {
