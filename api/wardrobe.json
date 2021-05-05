@@ -139,11 +139,11 @@
   "seasons": [
     {
       "id": 1,
-      "name": "spring/summer"
+      "name": "spring-summer"
     },
     {
       "id": 2,
-      "name": "autumn/winter"
+      "name": "autumn-winter"
     },
     {
       "id": 3,

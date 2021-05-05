@@ -12,7 +12,7 @@ export const GarmentCard = ({ garment }) => {
         <div className="card-border">
             <div className="card-top-border">
                 <img className="card-icon" alt="card-icon" src={ skirt }></img>
-                <span className="dot"></span>
+                <span className="dot" id={garment.color}></span>
             </div>
             <div className="card-middle-border">
                 <h3>{garment.title}</h3>
