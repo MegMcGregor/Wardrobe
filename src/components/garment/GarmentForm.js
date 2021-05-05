@@ -26,7 +26,7 @@ export const GarmentForm = () => {
         occasionId: 0,
         composition: "",
         conditionId: 0,
-        purchaseDate: 0
+        purchaseDateId: 0
     });
 
     const [images, setImages] = useState([]);
@@ -65,7 +65,7 @@ export const GarmentForm = () => {
         const typeId = garment.typeId;
         const conditionId = garment.conditionId
         const occasionId = garment.occasionId
-        const purchaseDate = garment.purchaseDate
+        const purchaseDate = garment.purchaseDateId
         const seasonId = garment.seasonId
         const brand = garment.brand
         const composition = garment.composition
@@ -211,11 +211,11 @@ export const GarmentForm = () => {
                         <input id="composition" type="text" placeholder="composition" value={garment.composition} onChange={handleControlledInputChange} />
 
                         <label htmlFor="purchase-date-select">purchase date:</label>
-                        <select value={garment.purchaseDate} id="purchaseDate" className="form-menu" onChange={handleControlledInputChange}>
+                        <select value={garment.purchaseDateId} id="purchaseDate" className="form-menu" onChange={handleControlledInputChange}>
                             <option>date</option>
-                            {purchaseDates.map(date => (
-                                <option key={purchaseDate} value={purchaseDate}>
-                                    {purchaseDate}
+                            {purchaseDates.map(purchaseDate => (
+                                <option key={purchaseDate.id} value={purchaseDate.id}>
+                                    {purchaseDate.purchaseDate}
                                 </option>
                             ))}
                         </select>

@@ -24,7 +24,7 @@
       "seasonId": 1,
       "conditionId": 1,
       "composition": "1000% polyester",
-      "purchaseDate": 2020
+      "purchaseDateId": 1
     },
     {
       "userId": 2,
@@ -37,7 +37,7 @@
       "occasionId": 2,
       "composition": "100% cotton",
       "condition": 0,
-      "purchaseDate": 0,
+      "purchaseDateId": 2,
       "conditionId": 2,
       "id": 2
     }
@@ -169,26 +169,42 @@
     }
   ],
   "purhcaseDates": [
-    {
-      "purchaseDate": 2021
+    { "id": 1,
+      "purchaseDate": "2021"
+    },
+    { "id": 2,
+      "purchaseDate": "2020"
+    },
+    { "id": 3,
+      "purchaseDate": "2019"
+    },
+    { "id": 4,
+      "purchaseDate": "2018"
     },
     {
-      "purchaseDate": 2020
+      "id": 5,
+      "purchaseDate": "2017"
     },
     {
-      "purchaseDate": 2019
+       "id": 6,
+      "purchaseDate": "2016"
     },
     {
-      "purchaseDate": 2018
+      "id": 7,
+      "purchaseDate": "2015"
+    },
+    { 
+      "id": 8,
+      "purchaseDate": "2014"
     },
     {
-      "purchaseDate": 2017
+      "id": 9,
+      "purchaseDate": "2013"
     },
-    {
-      "purchaseDate": 2016
-    },
-    {
-      "purchaseDate": 2015
+    { 
+      "id": 10,
+      "purchaseDate": "2012"
     }
+
   ]
 }
