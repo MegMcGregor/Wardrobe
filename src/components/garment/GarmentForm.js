@@ -30,7 +30,6 @@ export const GarmentForm = () => {
     });
 
     const [images, setImages] = useState([]);
-    const [selectedColor, setSelectedColor] = useState([]);
     const [colors, setColors] = useState([]);
     const [selectedColor, setSelectedColor] = useState([]);
     const [types, setTypes] = useState([]);
@@ -57,63 +56,6 @@ export const GarmentForm = () => {
         setGarment(newGarment)
     };
 
-<<<<<<< HEAD
-=======
-
-    const handleColorChange = (event) => {
-        event.preventDefault()
-        const selectedColor = event.target.id
-        setSelectedColor(selectedColor)
-        
-    }
-
-
-    const handleClickSaveGarment = (event) => {
-        event.preventDefault()
-
-        // const colorId = garment.colorId
-        const typeId = garment.typeId;
-        const conditionId = garment.conditionId
-        const occasionId = garment.occasionId
-        const purchaseDate = garment.purchaseDateId
-        const seasonId = garment.seasonId
-        const brand = garment.brand
-        const composition = garment.composition
-        const title = garment.title
-
-
-        if (typeId === 0 || conditionId === 0 || occasionId === 0) {
-            window.alert("Please complete the form before submitting");
-        } else {
-            addGarment(garment)
-                .then(() => history.push("/garments"));
-        }
-    }
-
-
-
-    useEffect(() => {
-        getAllTypes()
-            .then(typesFromAPI => {
-                setTypes(typesFromAPI)
-            })
-    }, []);
-
-    useEffect(() => {
-        getAllColors()
-            .then(colorsFromAPI => {
-                setColors(colorsFromAPI)
-            })
-    }, []);
-
-
-    useEffect(() => {
-        getAllOccasions()
-            .then(occasionsFromAPI => {
-                setOccasions(occasionsFromAPI)
-            })
-    }, []);
->>>>>>> main
 
 const handleClickSaveGarment = (event) => {
     event.preventDefault()
