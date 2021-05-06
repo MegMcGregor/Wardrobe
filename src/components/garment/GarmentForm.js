@@ -40,9 +40,13 @@ export const GarmentForm = () => {
 
 
     const handleControlledInputChange = (event) => {
+        event.preventDefault()
 
         const newGarment = { ...garment }
         let selectedVal = event.target.value
+
+        const selectedColor = event.target.id
+        setSelectedColor(selectedColor)
 
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
@@ -51,14 +55,6 @@ export const GarmentForm = () => {
         newGarment[event.target.id] = selectedVal
         setGarment(newGarment)
     };
-
-    const handleColorChange = (event) => {
-        event.preventDefault()
-        const selectedColor = event.target.id
-        setSelectedColor(selectedColor)
-
-    }
-
 
 
 const handleClickSaveGarment = (event) => {
@@ -154,14 +150,14 @@ return (
 
             <div className="form-middle-border">
                 <div className="color-container">
-                    <button value={garment.colorId} id="red" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="orange" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="yellow" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="green" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="blue" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="purple" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="black" className="dot" onClick={handleColorChange}></button>
-                    <button value={garment.colorId} id="white" className="dot" onClick={handleColorChange}></button>
+                    <button value={garment.colorId} id="red" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="orange" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="yellow" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="green" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="blue" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="purple" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="black" className="dot" onClick={handleControlledInputChange}></button>
+                    <button value={garment.colorId} id="white" className="dot" onClick={handleControlledInputChange}></button>
                 </div>
                 <div className="form-group">
                     <label htmlFor="brand-name-input">brand:</label>
