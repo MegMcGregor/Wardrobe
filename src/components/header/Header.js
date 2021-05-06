@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { withRouter } from "react-router-dom"
 import "./Header.css" 
 import { getAllTypes } from "../../modules/TypeManager"
 import { getAllOccasions } from "../../modules/OccasionManager"
@@ -7,35 +6,36 @@ import { getAllSeasons } from "../../modules/SeasonManager"
 import { Link } from "react-router-dom"
 import img from "./Wardrobe.png"
 
-export const Header = () => {
+export const Header = ( {setSelectedSeason, setSelectedType, setSelectedOccasion}) => {
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [seasons, setSeasons] = useState([])
-
-
-    // .then(() =>  history.push("/garments/${season.name}"))
-
-
+  
     useEffect(() => {
-        getAllSeasons()
-            .then(seasonsFromAPI => {
-                setSeasons(seasonsFromAPI)
-            })
-    }, []);
+      getAllSeasons()
+          .then(seasonsFromAPI => {
+              setSeasons(seasonsFromAPI)
+          })
+  }, []);
+  
+  useEffect(() => {
+      getAllOccasions()
+          .then(occasionsFromAPI => {
+              setOccasions(occasionsFromAPI)
+          })
+  }, []);
+  
+  useEffect(() => {
+      getAllTypes()
+          .then(typesFromAPI => {
+              setTypes(typesFromAPI)
+          })
+  }, []);
 
-    useEffect(() => {
-        getAllOccasions()
-            .then(occasionsFromAPI => {
-                setOccasions(occasionsFromAPI)
-            })
-    }, []);
-
-    useEffect(() => {
-        getAllTypes()
-            .then(typesFromAPI => {
-                setTypes(typesFromAPI)
-            })
-    }, []);
+  const handleSeasonSelectionChange = (event) => {
+    event.preventDefault()
+    setSelectedSeason(event.target.value)    
+}
 
 
 
@@ -77,7 +77,7 @@ export const Header = () => {
                                 </option>
                             ))}
                         </select>
-                        <select value="0">
+                        <select onChange={handleSeasonSelectionChange}>
                             <option value="0">sesason</option>
                             {seasons.map(season => (
                                 <option key={season.id} value={season.id}>
