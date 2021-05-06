@@ -35,6 +35,23 @@ export const Wardrobe = () => {
 //         })
 // }, []);
 
+
+// const handleSeasonSelectionChange = (event) => {
+//   event.preventDefault()
+//   let springSummerGarments = garments.filter(garment => garment.seasonId === 1)
+//   let fallWinterGarments = garments.filter(garment => garment.seasonId === 2)
+//   let yearRoundGarments = garments.filter(garment => garment.seasonId === 3)
+
+//   if (event.target.id === 1) {
+//     return springSummerGarments
+//   }
+//   else if (event.target.id === 2) {
+//     return fallWinterGarments
+//   }
+//   else if (event.target.id === 3) {
+//     return yearRoundGarments
+//   }
+
   return (
     <>
       <Route
