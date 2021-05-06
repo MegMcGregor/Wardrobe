@@ -1,56 +1,55 @@
-import React, { useState, useEffect }from "react"
+import React, { useState, useEffect } from "react"
 import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
-// import { getAllTypes } from "../modules/TypeManager"
-// import { getAllOccasions } from "../modules/OccasionManager"
-// import { getAllSeasons } from "../modules/SeasonManager"
+import { getAllTypes } from "../modules/TypeManager"
+import { getAllOccasions } from "../modules/OccasionManager"
+import { getAllSeasons } from "../modules/SeasonManager"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Header } from "./header/Header.js"
- 
+
 export const Wardrobe = () => {
 
-//   const [types, setTypes] = useState([]);
-//   const [occasions, setOccasions] = useState([]);
-//   const [seasons, setSeasons] = useState([])
+  const [types, setTypes] = useState([]);
+  const [occasions, setOccasions] = useState([]);
+  const [seasons, setSeasons] = useState([])
+  const [selectedSeason, setSelectedSeason] = useState(null)
+  const [selectedType, setSelectedType] = useState(null)
+  const [selectedOccasion, setSelectedOccasion] = useState(null)
 
-//   useEffect(() => {
-//     getAllSeasons()
-//         .then(seasonsFromAPI => {
-//             setSeasons(seasonsFromAPI)
-//         })
-// }, []);
+  useEffect(() => {
+    getAllSeasons()
+      .then(seasonsFromAPI => {
+        setSeasons(seasonsFromAPI)
+      })
+  }, []);
 
-// useEffect(() => {
-//     getAllOccasions()
-//         .then(occasionsFromAPI => {
-//             setOccasions(occasionsFromAPI)
-//         })
-// }, []);
+  useEffect(() => {
+    getAllOccasions()
+      .then(occasionsFromAPI => {
+        setOccasions(occasionsFromAPI)
+      })
+  }, []);
 
-// useEffect(() => {
-//     getAllTypes()
-//         .then(typesFromAPI => {
-//             setTypes(typesFromAPI)
-//         })
-// }, []);
+  useEffect(() => {
+    getAllTypes()
+      .then(typesFromAPI => {
+        setTypes(typesFromAPI)
+      })
+  }, []);
+
+  //write a function sets state in wardrobe & takes in an argument
+  //one state object for each dropdown
+  //pass it down as a prop into header
 
 
-// const handleSeasonSelectionChange = (event) => {
-//   event.preventDefault()
-//   let springSummerGarments = garments.filter(garment => garment.seasonId === 1)
-//   let fallWinterGarments = garments.filter(garment => garment.seasonId === 2)
-//   let yearRoundGarments = garments.filter(garment => garment.seasonId === 3)
+  //write function that takes in state object in header
+  //set state in wardrobe to state object that was passed in
 
-//   if (event.target.id === 1) {
-//     return springSummerGarments
-//   }
-//   else if (event.target.id === 2) {
-//     return fallWinterGarments
-//   }
-//   else if (event.target.id === 3) {
-//     return yearRoundGarments
-//   }
+  //pass state obj down as prop to application views
+  //need use effect in application views. in dependency array be listening for state obj that 
+  //inside use effect in app views write filter
+
 
   return (
     <>
@@ -59,12 +58,13 @@ export const Wardrobe = () => {
           if (sessionStorage.getItem("app_user_id")) {
             return (
               <>
-                <Header />
+                <Header
+                  setSelectedSeason={setSelectedSeason}
+                  setSelectedOccasion={setSelectedOccasion}
+                  setSelectedType={setSelectedType}
+                />
                 <ApplicationViews
-                // key={types.id}
-                // key={occasions.id}
-                // key={seasons.id}
-                 />
+                  selectedSeason={selectedSeason} />
               </>
             )
           } else {
@@ -80,4 +80,5 @@ export const Wardrobe = () => {
         <Register />
       </Route>
     </>)
-    }
+
+}

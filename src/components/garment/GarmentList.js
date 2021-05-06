@@ -5,15 +5,17 @@ import { getAllGarments, getGarmentById } from "../../modules/GarmentManager"
 import "./GarmentList.css"
 
 
-export const GarmentList = () => {
+export const GarmentList = ({selectedSeason}) => {
 
     let history = useHistory();
 
     const [garments, setGarments] = useState([]);
+    const [displayedGarments, setDisplayedGarments] = useState([]);
 
     const getGarments = () => {
         return getAllGarments().then(garmentsFromAPI => {
             setGarments(garmentsFromAPI);
+            setDisplayedGarments(garmentsFromAPI)
         });
     };
 
@@ -21,6 +23,10 @@ export const GarmentList = () => {
         getGarments();
     }, []);
 
+    useEffect(() => {
+    const matching = garments.filter(garment => garment.seasonId === +selectedSeason)
+    setDisplayedGarments(matching)
+    }, [selectedSeason]);
 
     return (
         <>
@@ -36,7 +42,7 @@ export const GarmentList = () => {
 
                 </div>
                 <div className="card-container">
-                    {garments.map(garment =>
+                    {displayedGarments.map(garment =>
                         < GarmentCard 
                         key={garment.id} 
                         garment={garment} />

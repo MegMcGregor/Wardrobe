@@ -6,7 +6,7 @@ import { getAllSeasons } from "../../modules/SeasonManager"
 import { Link } from "react-router-dom"
 import img from "./Wardrobe.png"
 
-export const Header = () => {
+export const Header = ( {setSelectedSeason, setSelectedType, setSelectedOccasion}) => {
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [seasons, setSeasons] = useState([])
@@ -31,6 +31,12 @@ export const Header = () => {
               setTypes(typesFromAPI)
           })
   }, []);
+
+  const handleSeasonSelectionChange = (event) => {
+    event.preventDefault()
+    setSelectedSeason(event.target.value)    
+}
+
 
 
     return (
@@ -71,7 +77,7 @@ export const Header = () => {
                                 </option>
                             ))}
                         </select>
-                        <select value="0">
+                        <select onChange={handleSeasonSelectionChange}>
                             <option value="0">sesason</option>
                             {seasons.map(season => (
                                 <option key={season.id} value={season.id}>

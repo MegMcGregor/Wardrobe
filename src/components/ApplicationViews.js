@@ -3,12 +3,13 @@ import { Redirect, Route } from "react-router-dom";
 import { GarmentList } from "./garment/GarmentList"
 import { GarmentDetail } from "./garment/GarmentDetailCard"
 import { GarmentForm } from "./garment/GarmentForm"
-
+import { EditGarmentForm } from "./garment/GarmentEditForm"
+ 
 // keep track of selection from headaer and pass value into application views
 
 
 
-export const ApplicationViews = () => {
+export const ApplicationViews = ({selectedSeason}) => {
 
     return (
         <>
@@ -21,8 +22,14 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route exact path="/garments">
-                < GarmentList />
+                < GarmentList
+                selectedSeason={selectedSeason} />
             </Route>
+
+            {/* <Route exact path="/edit-garment">
+                < EditGarmentForm />
+            </Route> */}
+            
         </>
     )
 
