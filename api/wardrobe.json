@@ -197,16 +197,20 @@
     }
   ],
   "purhcaseDates": [
-    { "id": 1,
+    {
+      "id": 1,
       "purchaseDate": "2021"
     },
-    { "id": 2,
+    {
+      "id": 2,
       "purchaseDate": "2020"
     },
-    { "id": 3,
+    {
+      "id": 3,
       "purchaseDate": "2019"
     },
-    { "id": 4,
+    {
+      "id": 4,
       "purchaseDate": "2018"
     },
     {
@@ -214,14 +218,14 @@
       "purchaseDate": "2017"
     },
     {
-       "id": 6,
+      "id": 6,
       "purchaseDate": "2016"
     },
     {
       "id": 7,
       "purchaseDate": "2015"
     },
-    { 
+    {
       "id": 8,
       "purchaseDate": "2014"
     },
@@ -229,10 +233,9 @@
       "id": 9,
       "purchaseDate": "2013"
     },
-    { 
+    {
       "id": 10,
       "purchaseDate": "2012"
     }
-
   ]
 }
