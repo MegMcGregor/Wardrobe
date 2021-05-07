@@ -219,7 +219,7 @@ export const GarmentForm = () => {
                 </div>
 
                 <div className="form-footer-border">
-                    <button onClick={() => history.goBack()}>Back</button>
+                    <button>back</button>
                     <button className="form-save" onClick={handleClickSaveGarment}>save</button>
                 </div>
 
