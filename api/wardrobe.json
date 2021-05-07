@@ -14,17 +14,10 @@
   "garments": [
     {
       "id": 1,
-      "userId": 2,
-      "imageId": 0,
-      "colorId": 1,
-      "brand": "GapFit",
       "title": "testestest",
-      "typeId": 1,
-      "occasionId": 1,
-      "seasonId": 1,
-      "conditionId": 1,
       "composition": "1000% polyester",
-      "purchaseDateId": 1
+      "brand": "GapFit",
+      "userId": 2
     },
     {
       "userId": 2,
@@ -42,18 +35,18 @@
       "id": 2
     },
     {
-      "userId": 2,
-      "title": "wrap dress",
+      "id": 3,
+      "title": "shorts",
       "imageId": 0,
-      "colorId": 0,
-      "seasonId": 3,
-      "brand": "jcrew",
-      "typeId": 2,
-      "occasionId": 5,
+      "colorId": "4",
+      "seasonId": "2",
+      "typeId": "3",
+      "occasionId": "6",
       "composition": "100% cotton",
+      "conditionId": "1",
       "purchaseDateId": 1,
-      "conditionId": 2,
-      "id": 3
+      "brand": "limited too",
+      "userId": 2
     },
     {
       "userId": 2,

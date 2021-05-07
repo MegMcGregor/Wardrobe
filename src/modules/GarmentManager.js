@@ -19,3 +19,13 @@ export const addGarment = (newGarment) => {
         body: JSON.stringify(newGarment)
     }).then(response => response.json())
 }
+
+export const updateGarment = (editedGarment) => {
+    return fetch(`${remoteURL}/garments/${editedGarment.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedGarment)
+    }).then(data => data.json());
+  }

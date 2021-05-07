@@ -38,18 +38,6 @@ export const Wardrobe = () => {
       })
   }, []);
 
-  //write a function sets state in wardrobe & takes in an argument
-  //one state object for each dropdown
-  //pass it down as a prop into header
-
-
-  //write function that takes in state object in header
-  //set state in wardrobe to state object that was passed in
-
-  //pass state obj down as prop to application views
-  //need use effect in application views. in dependency array be listening for state obj that 
-  //inside use effect in app views write filter
-
 
   return (
     <>

@@ -4,7 +4,7 @@ import { useParams, useHistory } from "react-router-dom";
 import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
-    const [garment, setGarment] = useState({ title: "", composition: "", brand:""})
+    const [garment, setGarment] = useState({ title: "", composition: "", brand: "" })
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
@@ -47,6 +47,7 @@ export const GarmentDetail = () => {
 
                 <div className="detail-info-border">
                     <ul>
+                        <li>{garment.purchaseDate?.purchaseDate}</li>
                         <li>{garment.brand}</li>
                         <li>{garment.type?.name}</li>
                         <li>{garment.occcasion?.name}</li>
@@ -61,7 +62,10 @@ export const GarmentDetail = () => {
                         <a href="/">back</a>
                     </div>
                     <div className="detail-container-bottom-right">
-                        <a href="/">edit</a>
+                        <button type="button"
+                          onClick={() => history.push(`/garments/${garment.id}/edit`)}>
+                          edit</button>
+                    
                         <a href="/">delete</a>
                     </div>
                 </div>
