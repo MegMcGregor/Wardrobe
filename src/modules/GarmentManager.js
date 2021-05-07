@@ -29,3 +29,9 @@ export const updateGarment = (editedGarment) => {
       body: JSON.stringify(editedGarment)
     }).then(data => data.json());
   }
+
+  export const deleteGarment = (id) => {
+    return fetch(`${remoteURL}/garment/${id}`, {
+      method: "DELETE"
+    }).then(result => result.json())
+  }

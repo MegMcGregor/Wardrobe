@@ -111,7 +111,7 @@ export const GarmentEditForm = () => {
 
             <div className="page-title-container">
                 <h2>
-                    new item
+                    edit item
                         </h2>
             </div>
             <form className="form-border">
@@ -200,7 +200,7 @@ export const GarmentEditForm = () => {
                 </div>
 
                 <div className="form-footer-border">
-                    <a className="form-back" href="/">back</a>
+              <Link to to={"/garments"}><button>back</button></Link>
                     <button className="form-save" onClick={updateExistingGarment}>save</button>
                 </div>
 

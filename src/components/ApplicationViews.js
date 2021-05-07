@@ -6,7 +6,7 @@ import { GarmentForm } from "./garment/GarmentForm"
 import { GarmentEditForm } from "./garment/GarmentEditForm"
  
 
-export const ApplicationViews = ({selectedSeason}) => {
+export const ApplicationViews = ({selectedSeason, selectedType, selectedOccasion}) => {
 
     return (
         <>
@@ -20,7 +20,9 @@ export const ApplicationViews = ({selectedSeason}) => {
 
             <Route exact path="/garments">
                 < GarmentList
-                selectedSeason={selectedSeason} />
+                selectedSeason={selectedSeason}
+                selectedType={selectedType}
+                selectedOccasion={selectedOccasion} />
             </Route>
 
             <Route path="/garments/:garmentId(\d+)/edit">

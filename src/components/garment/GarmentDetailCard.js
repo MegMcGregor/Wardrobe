@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getGarmentById } from "../../modules/GarmentManager";
+import { getAllGarments, getGarmentById, deleteGarment } from "../../modules/GarmentManager";
 import { useParams, useHistory } from "react-router-dom";
 import "./GarmentDetailCard.css";
 
@@ -20,7 +20,12 @@ export const GarmentDetail = () => {
                 setIsLoading(false);
             });
     }, [garmentId]);
-    console.log(garment, "garment")
+
+
+    // const handleDeleteGarment = (id) => {
+    //     deleteGarment(id)
+    //     .then(() => getAllGarments().then(setGarments));
+    // };
 
 
 
@@ -59,14 +64,15 @@ export const GarmentDetail = () => {
 
                 <div className="detail-footer-border">
                     <div className="detail-container-bottom-left">
-                        <a href="/">back</a>
+                    <button onClick={() => history.goBack()}>Back</button>
                     </div>
                     <div className="detail-container-bottom-right">
                         <button type="button"
                           onClick={() => history.push(`/garments/${garment.id}/edit`)}>
                           edit</button>
                     
-                        <a href="/">delete</a>
+                        <button type="button"
+                        >delete</button>
                     </div>
                 </div>
 

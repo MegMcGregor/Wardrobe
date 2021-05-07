@@ -1,11 +1,11 @@
-import React, { useState, useEffect}  from "react"
+import React, { useState, useEffect } from "react"
 import { GarmentCard } from "./GarmentCard"
 import { useHistory } from "react-router-dom"
 import { getAllGarments, getGarmentById } from "../../modules/GarmentManager"
 import "./GarmentList.css"
 
 
-export const GarmentList = ({selectedSeason}) => {
+export const GarmentList = ({ selectedSeason, selectedType, selectedOccasion }) => {
 
     let history = useHistory();
 
@@ -24,9 +24,21 @@ export const GarmentList = ({selectedSeason}) => {
     }, []);
 
     useEffect(() => {
-    const matching = garments.filter(garment => garment.seasonId === +selectedSeason)
-    setDisplayedGarments(matching)
+        const matchingSeason = garments.filter(garment => garment.seasonId === +selectedSeason)
+        setDisplayedGarments(matchingSeason)
     }, [selectedSeason]);
+
+    useEffect(() => {
+        const matchingType = garments.filter(garment => garment.typeId === +selectedType)
+        setDisplayedGarments(matchingType)
+    }, [selectedType])
+
+    useEffect(() => {
+        const matchingOccasion = garments.filter(garment => garment.occasionId === +selectedOccasion)
+        setDisplayedGarments(matchingOccasion)
+    }, [selectedOccasion])
+
+
 
     return (
         <>
@@ -36,16 +48,11 @@ export const GarmentList = ({selectedSeason}) => {
                         my wardrobe
                 </h2>
                 </div>
-                <div className="search-and-add">
-                    <button type="button"
-                     onClick={() => {history.push("/garments/garment-form")}}>New Item</button>
-
-                </div>
                 <div className="card-container">
                     {displayedGarments.map(garment =>
-                        < GarmentCard 
-                        key={garment.id} 
-                        garment={garment} />
+                        < GarmentCard
+                            key={garment.id}
+                            garment={garment} />
                     )}
                 </div>
             </div>
