@@ -85,7 +85,7 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                                         </option>
                                     ))}
                                 </select>
-                                <select onChangle={handleOccasionSelectionChange}>
+                                <select onChange={handleOccasionSelectionChange}>
                                     <option value="0">occasion</option>
                                     {occasions.map(occasion => (
                                         <option key={occasion.id} value={occasion.id}>

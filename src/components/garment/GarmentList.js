@@ -33,6 +33,11 @@ export const GarmentList = ({ selectedSeason, selectedType, selectedOccasion }) 
         setDisplayedGarments(matchingType)
     }, [selectedType])
 
+    useEffect(() => {
+        const matchingOccasion = garments.filter(garment => garment.occasionId === +selectedOccasion)
+        setDisplayedGarments(matchingOccasion)
+    }, [selectedOccasion])
+
 
 
     return (
