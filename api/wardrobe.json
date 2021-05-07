@@ -13,13 +13,6 @@
   ],
   "garments": [
     {
-      "id": 1,
-      "title": "testestest",
-      "composition": "1000% polyester",
-      "brand": "GapFit",
-      "userId": 2
-    },
-    {
       "userId": 2,
       "title": "midi dress",
       "imageId": 0,
@@ -61,6 +54,62 @@
       "purchaseDateId": 6,
       "conditionId": 4,
       "id": 4
+    },
+    {
+      "userId": 2,
+      "title": "Black Leggings",
+      "imageId": 0,
+      "colorId": 7,
+      "seasonId": 3,
+      "brand": "GapFit",
+      "typeId": 5,
+      "occasionId": 1,
+      "composition": "90% nylon, 10% lycra",
+      "conditionId": 1,
+      "purchaseDateId": 1,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "title": "Joggers",
+      "imageId": 0,
+      "colorId": 5,
+      "seasonId": 3,
+      "brand": "outdoor voices",
+      "typeId": 5,
+      "occasionId": 2,
+      "composition": "100% cotton",
+      "conditionId": 2,
+      "purchaseDateId": 2,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "title": "Strappy Tank",
+      "imageId": 0,
+      "colorId": 5,
+      "seasonId": 1,
+      "brand": "Zara",
+      "typeId": 1,
+      "occasionId": 4,
+      "composition": "100% viscose",
+      "conditionId": 2,
+      "purchaseDateId": 7,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "title": "Wide-cut tee",
+      "imageId": 0,
+      "colorId": 2,
+      "seasonId": 3,
+      "brand": "RicherPoorer",
+      "typeId": 2,
+      "occasionId": 6,
+      "composition": "100% cotton",
+      "conditionId": 1,
+      "purchaseDateId": 1,
+      "id": 8
     }
   ],
   "colors": [

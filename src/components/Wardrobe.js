@@ -52,7 +52,9 @@ export const Wardrobe = () => {
                   setSelectedType={setSelectedType}
                 />
                 <ApplicationViews
-                  selectedSeason={selectedSeason} />
+                  selectedSeason={selectedSeason}
+                  selectedType={selectedType}
+                  selectedOccasion={selectedOccasion} />
               </>
             )
           } else {
