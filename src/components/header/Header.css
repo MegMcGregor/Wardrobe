@@ -37,7 +37,7 @@
 
 .title-header {
     height: 5em;
-    width: auto
+    width: auto;
 }
 
 li {
@@ -59,26 +59,25 @@ button {
         width: 8em;
         background-color: white;
         font-family: 'Montserrat', sans-serif;
-        padding: 6px;
         transition-duration: 0.4s;
         background: transparent;
         border: 1px solid 
       }
+
+select {
+    width: 8em;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    transition-duration: 0.4s;
+    background: transparent;
+    border: 1px solid;
+    margin: 10px;
+}
       
 button:hover {
         background-color: #b8b42d; 
         color: white;
       }
-
-option {
-        width: 8em;
-        background-color: white;
-        font-family: 'Montserrat', sans-serif;
-        padding: 6px;
-        transition-duration: 0.4s;
-        background: transparent;
-        border: 1px solid 
-}
 
 
 

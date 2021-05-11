@@ -96,7 +96,6 @@
     margin: 1em;
 }
 
-
 .header-dot {
     height: 20px;
     width: 20px;
@@ -157,4 +156,8 @@ select {
 .form-footer-border {
     display: flex;
     justify-content: space-between;
+}
+
+.page-title {
+    margin-bottom: 2em;
 }

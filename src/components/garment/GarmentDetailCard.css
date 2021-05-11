@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
 .main-container {
     margin-left: auto;
     margin-right: auto;
@@ -5,17 +10,62 @@
 }
 
 .detail-card-container {
-    box-sizing: border-box;
     display: grid;
     grid-template-rows: "card-top";
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 60%;
     border: black;
     border-width: 1.5px;
     border-style: solid;
+    font-family: 'Montserrat', sans-serif;
+    padding: .5em;
+}
+
+.detail-card-header-border {
+    display: inline-flex;
+    justify-content: space-between;
+   
+}
+
+.detail-container-top-left {
+    display: inline-flex
+}
+
+.detail-button {
+    margin: 0;
 }
 
 .detail-info-border li {
     display: block;
+    width: 100%
+}
+
+.detail-container-bottom-right {
+    float: right;
+}
+
+.detail-container-bottom-left {
+    float: left;
+}
+
+ h2 {
+    font-size: x-large;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+} 
+
+.detail-title {
+    margin-bottom: 2em
+}
+
+.dot {
+    margin: 1em;
+}
+
+.line {
+    border-bottom: 1px solid;
+    width: 100%;
+    margin: 0 auto
 }

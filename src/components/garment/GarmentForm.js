@@ -129,7 +129,7 @@ export const GarmentForm = () => {
         <div className="main-container">
 
             <div className="page-title-container">
-                <h2>
+                <h2 className="page-title">
                     new item
                 </h2>
             </div>
