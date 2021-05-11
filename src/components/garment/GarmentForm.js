@@ -31,7 +31,6 @@ export const GarmentForm = () => {
 
     const [images, setImages] = useState([]);
     const [colors, setColors] = useState([]);
-    const [selectedColor, setSelectedColor] = useState([]);
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [purchaseDates, setPurchaseDates] = useState([])

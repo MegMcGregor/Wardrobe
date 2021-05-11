@@ -31,7 +31,7 @@ export const updateGarment = (editedGarment) => {
   }
 
   export const deleteGarment = (id) => {
-    return fetch(`${remoteURL}/garment/${id}`, {
+    return fetch(`${remoteURL}/garments/${id}`, {
       method: "DELETE"
     }).then(result => result.json())
   }

@@ -5,6 +5,7 @@ import "./GarmentDetailCard.css";
 
 export const GarmentDetail = () => {
     const [garment, setGarment] = useState({ title: "", composition: "", brand: "" })
+    const [garments, setGarments] = useState([])
     const [isLoading, setIsLoading] = useState(true);
     const { garmentId } = useParams();
     const history = useHistory();
@@ -21,6 +22,12 @@ export const GarmentDetail = () => {
             });
     }, [garmentId]);
 
+
+    const handleDeleteGarment = (id) => {
+        deleteGarment(id)
+        // .then(() => getAllGarments().then(setGarments))
+        .then(()=>history.push(`/garments`))
+    };
 
     return (
         <div className="main-container">
@@ -65,7 +72,7 @@ export const GarmentDetail = () => {
                           onClick={() => history.push(`/garments/${garment.id}/edit`)}>
                           edit</button>
                     
-                        <button className="delete-button" type="button"
+                        <button className="delete-button" type="button" onClick={() => handleDeleteGarment(garment.id)}
                         >delete</button>
                     </div>
                 </div>
