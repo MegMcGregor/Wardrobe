@@ -118,6 +118,7 @@
     border-style: solid;
     margin-left: auto;
     margin-right: auto;
+    padding: 0.5em;
 }
 
 .title-input {

@@ -70,34 +70,37 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                         <img className="title-header" alt="wardrobe" src={headertype}></img>
                         <div className="nav-container">
                             <nav>
-                                <li>
-                                    <button type="button"
-                                        onClick={() => { history.push("/garments/garment-form") }}>new item</button></li>
-                                <button>reports</button>
-                                <select onChange={handleTypeSelectionChange}>
-                                    <option value="0">type</option>
-                                    {types.map(type => (
-                                        <option key={type.id} value={type.id}>
-                                            {type.name}
-                                        </option>
-                                    ))}
-                                </select>
-                                <select onChange={handleOccasionSelectionChange}>
-                                    <option value="0">occasion</option>
-                                    {occasions.map(occasion => (
-                                        <option key={occasion.id} value={occasion.id}>
-                                            {occasion.name}
-                                        </option>
-                                    ))}
-                                </select>
-                                <select onChange={handleSeasonSelectionChange}>
-                                    <option value="0">sesason</option>
-                                    {seasons.map(season => (
-                                        <option key={season.id} value={season.id}>
-                                            {season.name}
-                                        </option>
-                                    ))}
-                                </select>
+                                <li><button type="button" className="nav-button"
+                                    onClick={() => { history.push("/garments/garment-form") }}>new item</button>
+                                </li>
+                                <li><button className="nav-button">reports</button>
+                                </li>
+                                <div className="nav-select">
+                                    <select onChange={handleTypeSelectionChange}>
+                                        <option value="0">type</option>
+                                        {types.map(type => (
+                                            <option key={type.id} value={type.id}>
+                                                {type.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <select onChange={handleOccasionSelectionChange}>
+                                        <option value="0">occasion</option>
+                                        {occasions.map(occasion => (
+                                            <option key={occasion.id} value={occasion.id}>
+                                                {occasion.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <select onChange={handleSeasonSelectionChange}>
+                                        <option value="0">sesason</option>
+                                        {seasons.map(season => (
+                                            <option key={season.id} value={season.id}>
+                                                {season.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
                             </nav>
                         </div>
                     </div>

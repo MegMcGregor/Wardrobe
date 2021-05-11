@@ -146,7 +146,7 @@ export const GarmentForm = () => {
                             <option></option>
                         </select>
                     </div>
-                </div>
+                </div>                
 
                 <div className="form-middle-border">
                     <div className="color-container">
