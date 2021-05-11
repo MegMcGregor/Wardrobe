@@ -44,7 +44,7 @@ export const GarmentList = ({ selectedSeason, selectedType, selectedOccasion }) 
         <>
             <div className="main-container">
                 <div className="page-title-container">
-                    <h2>
+                    <h2 className="page-title">
                         my wardrobe
                 </h2>
                 </div>

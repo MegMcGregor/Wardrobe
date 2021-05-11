@@ -1,5 +1,5 @@
-.color-container button:focus {
-    border: black 3px solid;
+.color-container button:hover {
+    border: #C2EB98 2px solid
 }
 
 .main-container {
@@ -9,77 +9,81 @@
 }
 
 .red-dot {
-    background-color: #F24726;
-    opacity: 0.8;
+    background-color: #D90A27;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none;
 }
 
 .orange-dot {
-    background-color: #FA9710;
-    opacity: 0.8;
+    background-color: #F46124;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none;
+
 }
 
 .yellow-dot {
-    background-color: #FEF445;
-    opacity: 0.8;
+    background-color: #F3C70D;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none;
+
 }
 
 
 .green-dot {
-    background-color: #0CA789;
-    opacity: 0.8;
+    background-color: #017E3D;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none;
+
 }
 
 
 .blue-dot {
-    background-color: #2D9BF0;
-    opacity: 0.8;
+    background-color: #0841B6;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none;
+
 }
 
 
 .purple-dot {
-    background-color: #9510AC;
-    opacity: 0.8;
+    background-color: #A4047C;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none;
 }
 
 
 .black-dot {
     background-color: #1A1A1A;
-    opacity: 0.8;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none
 }
 
 .white-dot {
@@ -90,6 +94,7 @@
     border-radius: 50%;
     display: inline-block;
     margin: .4em;
+    border: none black, solid 1px;
 }
 
 .color-container {
@@ -161,4 +166,11 @@ select {
 
 .page-title {
     margin-bottom: 2em;
+}
+
+button {
+        font-family: 'Montserrat', sans-serif;
+        background: transparent;
+        font-size: medium;
+        border: 1px solid black
 }
