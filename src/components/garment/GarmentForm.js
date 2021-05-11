@@ -31,7 +31,7 @@ export const GarmentForm = () => {
 
     const [images, setImages] = useState([]);
     const [colors, setColors] = useState([]);
-    const [selectedColor, setSelectedColor] = useState([]);
+    const [selectedColor, setSelectedColor] = useState([])
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [purchaseDates, setPurchaseDates] = useState([])
@@ -42,11 +42,14 @@ export const GarmentForm = () => {
     const handleControlledInputChange = (event) => {
         event.preventDefault()
         const newGarment = { ...garment }
+        let selectedColor = event.target.className
         let selectedVal = event.target.value
 
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
+
+        setSelectedColor(selectedColor)
 
         newGarment[event.target.id] = selectedVal
         setGarment(newGarment)
@@ -78,7 +81,6 @@ export const GarmentForm = () => {
                 .then(() => history.push("/garments"));
         }
     }
-
 
 
     useEffect(() => {
@@ -136,7 +138,7 @@ export const GarmentForm = () => {
             <form className="form-border">
                 <div className="form-header-border">
                     <div className="form-top-left">
-                        <span className="black-dot"></span>
+                        <span className={selectedColor}></span>
                         <div className="title-input">
                             <input type="text" id="title" placeholder="title" value={garment.title} onChange={handleControlledInputChange} />
                         </div>
