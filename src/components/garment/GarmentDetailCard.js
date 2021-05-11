@@ -65,7 +65,7 @@ export const GarmentDetail = () => {
                           onClick={() => history.push(`/garments/${garment.id}/edit`)}>
                           edit</button>
                     
-                        <button className="detail-button" type="button"
+                        <button className="delete-button" type="button"
                         >delete</button>
                     </div>
                 </div>

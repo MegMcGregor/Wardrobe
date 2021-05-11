@@ -59,12 +59,11 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
             <div className="header-container">
                 <div className="top-header">
                     <a href="/">Logout</a>
-                    <img className="user-icon"></img>
                 </div>
 
                 <div className="bottom-header">
                     <div className="logo-container">
-                        <img className="logo" alt="logo" src={img}></img>
+                        <img className="logo" alt="logo" src={img} onClick={() => history.push(`/garments`)}></img>
                     </div>
                     <div className="title-container">
                         <img className="title-header" alt="wardrobe" src={headertype}></img>
