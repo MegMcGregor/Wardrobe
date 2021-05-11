@@ -33,8 +33,8 @@
       "imageId": 0,
       "colorId": 5,
       "seasonId": 3,
-      "typeId": 3,
-      "occasionId": 1,
+      "typeId": "6",
+      "occasionId": "6",
       "composition": "100% cotton",
       "conditionId": 3,
       "purchaseDateId": 4,
@@ -42,18 +42,18 @@
       "userId": 2
     },
     {
-      "userId": 2,
+      "id": 4,
       "title": "Smocked Top",
       "imageId": 0,
       "colorId": 1,
       "seasonId": 3,
-      "brand": "CurrentElliot",
       "typeId": 1,
       "occasionId": 6,
       "composition": "100% cotton",
+      "conditionId": "2",
       "purchaseDateId": 6,
-      "conditionId": 4,
-      "id": 4
+      "brand": "CurrentElliot",
+      "userId": 2
     },
     {
       "userId": 2,
@@ -84,18 +84,18 @@
       "id": 6
     },
     {
-      "userId": 2,
+      "id": 7,
       "title": "Strappy Tank",
       "imageId": 0,
       "colorId": 5,
       "seasonId": 1,
-      "brand": "Zara",
       "typeId": 1,
       "occasionId": 4,
       "composition": "100% viscose",
-      "conditionId": 2,
+      "conditionId": "4",
       "purchaseDateId": 7,
-      "id": 7
+      "brand": "Zara",
+      "userId": 2
     },
     {
       "userId": 2,
@@ -110,6 +110,20 @@
       "conditionId": 1,
       "purchaseDateId": 1,
       "id": 8
+    },
+    {
+      "userId": 2,
+      "title": "nss tshirt",
+      "imageId": 0,
+      "colorId": 7,
+      "seasonId": 3,
+      "brand": "nss",
+      "typeId": 2,
+      "occasionId": 1,
+      "composition": "cotton",
+      "conditionId": 1,
+      "purchaseDateId": 1,
+      "id": 9
     }
   ],
   "colors": [

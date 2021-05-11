@@ -6,6 +6,7 @@ import { getAllSeasons } from "../../modules/SeasonManager"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import img from "./Wardrobe.png"
+import headertype from "../images/headertype.png"
 
 export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion }) => {
     const [types, setTypes] = useState([]);
@@ -69,7 +70,8 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                     </div>
 
                     <div className="title-container">
-                        <h1>Wardrobe</h1>
+                        <img className="title-header" alt="wardrobe" src={headertype}></img>
+                        
                         <div className="nav-container">
                             <nav>
                                 <li>
