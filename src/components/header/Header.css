@@ -4,7 +4,7 @@
 /* full top header */
 .top-header {
     background-color: #173749;
-    height: 2em;
+    height: 2.5em;
 }
 
 .top-header a {
@@ -38,12 +38,13 @@
 }
 
 .logo:hover {
-    border: #b8b42d 2px solid
+    border: #173749 2px solid
 }
 
 /* title image */
 .title-header {
-    height: 5em;
+    margin-left: 6em;
+    height: 6em;
     width: auto;
 }
 
@@ -53,16 +54,17 @@
     font-family: 'Montserrat', sans-serif;
     background: transparent;
     border: none;
-    border: 1px solid;
     padding: .5em 1.5em;
+    font-size: medium;
+    font-weight: bold;
   }
 
 li {
     display: inline;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: .5em;
     color: black;
+    margin: 1em;
 }
 
 nav {
@@ -77,10 +79,17 @@ nav {
 select {
     padding: .5em 1.5em;
     margin: 0;
-    border: 1px solid;
+    border: none;
     appearance: none;
+    margin: 1em;
+    font-size: medium;
+    font-weight: bold;
+}
+
+select:hover {
+     border: solid 1px #173749
 }
       
-button:hover, select:hover {
-    border: #b8b42d 2px solid
+button:hover {
+    border: solid 1px #173749;
 }
