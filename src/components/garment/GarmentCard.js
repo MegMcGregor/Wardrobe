@@ -1,6 +1,6 @@
 import React from "react"
 import "./GarmentCard.css"
-import skirt from "./images/skirt.svg"
+import skirt from "../images/skirt.svg"
 import { Link } from "react-router-dom";
 
 

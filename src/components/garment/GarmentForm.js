@@ -129,7 +129,7 @@ export const GarmentForm = () => {
         <div className="main-container">
 
             <div className="page-title-container">
-                <h2>
+                <h2 className="page-title">
                     new item
                 </h2>
             </div>
@@ -146,7 +146,7 @@ export const GarmentForm = () => {
                             <option></option>
                         </select>
                     </div>
-                </div>
+                </div>                
 
                 <div className="form-middle-border">
                     <div className="color-container">

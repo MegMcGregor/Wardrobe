@@ -22,18 +22,11 @@ export const GarmentDetail = () => {
     }, [garmentId]);
 
 
-    // const handleDeleteGarment = (id) => {
-    //     deleteGarment(id)
-    //     .then(() => getAllGarments().then(setGarments));
-    // };
-
-
-
     return (
         <div className="main-container">
 
             <div className="page-title-container">
-                <h2>
+                <h2 className="detail-title">
                     garment details
                 </h2>
             </div>
@@ -49,13 +42,14 @@ export const GarmentDetail = () => {
                         <img alt="clothing icon"></img>
                     </div>
                 </div>
+                <span className="line"></span>
 
                 <div className="detail-info-border">
                     <ul>
                         <li>{garment.purchaseDate?.purchaseDate}</li>
                         <li>{garment.brand}</li>
                         <li>{garment.type?.name}</li>
-                        <li>{garment.occcasion?.name}</li>
+                        <li>{garment.occasion?.name}</li>
                         <li>{garment.season?.name}</li>
                         <li>{garment.condition?.name}</li>
                         <li>{garment.composition}</li>
@@ -71,7 +65,7 @@ export const GarmentDetail = () => {
                           onClick={() => history.push(`/garments/${garment.id}/edit`)}>
                           edit</button>
                     
-                        <button type="button"
+                        <button className="detail-button" type="button"
                         >delete</button>
                     </div>
                 </div>
