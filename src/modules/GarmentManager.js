@@ -6,7 +6,7 @@ export const getGarmentById = (garmentId) => {
 }
 
 export const getAllGarments = () => {
-    return fetch(`${remoteURL}/garments`)
+    return fetch(`${remoteURL}/garments?_expand=color`)
         .then(res => res.json())
 }
 

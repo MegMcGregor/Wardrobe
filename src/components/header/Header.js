@@ -8,12 +8,17 @@ import { Link } from "react-router-dom"
 import img from "./Wardrobe.png"
 import headertype from "../images/headertype.png"
 
-export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion }) => {
+export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion, clearUser, isAuthenticated }) => {
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [seasons, setSeasons] = useState([])
 
     const history = useHistory()
+
+    const handleLogout = () => {
+        clearUser();
+        history.push('/');
+    }
 
     useEffect(() => {
         getAllSeasons()
@@ -58,7 +63,7 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
 
             <div className="header-container">
                 <div className="top-header">
-                    <a href="/">Logout</a>
+                    <a onClick={handleLogout}>Logout</a>
                 </div>
 
                 <div className="bottom-header">

@@ -94,3 +94,13 @@ button:hover {
     border: #C2EB98 2px solid
 }
 
+a {
+    margin: .5em;
+    margin-right: 1em;
+}
+
+a:hover {
+    color: #C2EB98;
+    cursor: pointer;
+}
+

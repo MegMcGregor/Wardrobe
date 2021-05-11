@@ -19,7 +19,6 @@
     border-width: 1.5px;
     border-style: solid;
     font-family: 'Montserrat', sans-serif;
-    padding: .5em;
 }
 
 .detail-card-header-border {
@@ -32,13 +31,13 @@
     display: inline-flex
 }
 
-.detail-button {
-    margin: 0;
+.detail-container-top-left span {
+    align-items: center;
+    margin: 1.5em;
 }
 
 .detail-info-border li {
     display: block;
-    width: 100%
 }
 
 .detail-container-bottom-right {
@@ -49,23 +48,111 @@
     float: left;
 }
 
- h2 {
-    font-size: x-large;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-} 
 
 .detail-title {
     margin-bottom: 2em
 }
 
-.dot {
-    margin: 1em;
-}
 
 .line {
     border-bottom: 1px solid;
     width: 100%;
     margin: 0 auto
+}
+
+
+.red {
+    background-color: #D90A27;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: .4em;
+    border: none;
+}
+
+.orange {
+    background-color: #F46124;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: .4em;
+    border: none;
+
+}
+
+.yellow {
+    background-color: #F3C70D;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: .4em;
+    border: none;
+
+}
+
+
+.green {
+    background-color: #017E3D;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    border: none;
+
+}
+
+
+.blue {
+    background-color: #0841B6;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    border: none;
+
+}
+
+
+.purple {
+    background-color: #A4047C;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    border: none;
+}
+
+
+.black {
+    background-color: #1A1A1A;
+    opacity: .8;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    border: none
+}
+
+.white {
+    background-color:white;
+    opacity: 0.5;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1em;
+    border: none black, solid 1px;
 }

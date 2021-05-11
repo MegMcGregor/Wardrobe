@@ -22,10 +22,11 @@ export const GarmentDetail = () => {
             });
     }, [garmentId]);
 
+    console.log(garment)
+
 
     const handleDeleteGarment = (id) => {
         deleteGarment(id)
-        // .then(() => getAllGarments().then(setGarments))
         .then(()=>history.push(`/garments`))
     };
 
@@ -42,7 +43,7 @@ export const GarmentDetail = () => {
 
                 <div className="detail-card-header-border">
                     <div className="detail-container-top-left">
-                        <span className="dot"></span>
+                        <span className={garment.color?.name}></span>
                         <h2>{garment.title}</h2>
                     </div>
                     <div className="detail-container-top-right">

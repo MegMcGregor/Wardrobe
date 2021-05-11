@@ -16,6 +16,18 @@ export const Wardrobe = () => {
   const [selectedSeason, setSelectedSeason] = useState(null)
   const [selectedType, setSelectedType] = useState(null)
   const [selectedOccasion, setSelectedOccasion] = useState(null)
+  const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
+
+  const setAuthUser = (user) => {
+    sessionStorage.setItem("app_user_id", JSON.stringify(user))
+    setIsAuthenticated(sessionStorage.getItem("app_user_id") !== null)
+  }
+
+  const clearUser = () => {
+    sessionStorage.clear();
+    setIsAuthenticated(sessionStorage.getItem("app_user_id") !== null)
+  }
+
 
   useEffect(() => {
     getAllSeasons()
@@ -47,11 +59,15 @@ export const Wardrobe = () => {
             return (
               <>
                 <Header
+                  clearUser={clearUser} 
+                  isAuthenticated={isAuthenticated}
                   setSelectedSeason={setSelectedSeason}
                   setSelectedOccasion={setSelectedOccasion}
                   setSelectedType={setSelectedType}
                 />
                 <ApplicationViews
+                  setAuthUser={setAuthUser} 
+                  isAuthenticated={isAuthenticated}
                   selectedSeason={selectedSeason}
                   selectedType={selectedType}
                   selectedOccasion={selectedOccasion} />
