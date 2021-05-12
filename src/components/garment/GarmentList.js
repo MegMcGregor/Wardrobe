@@ -11,9 +11,10 @@ export const GarmentList = ({ selectedSeason, selectedType, selectedOccasion }) 
 
     const [garments, setGarments] = useState([]);
     const [displayedGarments, setDisplayedGarments] = useState([]);
+    const userId = JSON.parse(sessionStorage.getItem("app_user_id"))
 
     const getGarments = () => {
-        return getAllGarments().then(garmentsFromAPI => {
+        return getAllGarments(userId).then(garmentsFromAPI => {
             setGarments(garmentsFromAPI);
             setDisplayedGarments(garmentsFromAPI)
         });
