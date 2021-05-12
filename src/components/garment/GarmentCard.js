@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 
 
 export const GarmentCard = ({ garment }) => {
-    console.log(garment)
 
     return (
         <>
         <div className="card-border">
             <div className="card-top-border">
-                <img className="card-icon" alt="card-icon" ></img>
+                <img src={require(`../../../public/images/${garment.type? garment.type.image : "dress.svg"}`).default} className="card-icon" alt="card-icon" ></img>
                 <span className={garment.color.name}></span>
             </div>
             <div className="card-middle-border">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { GarmentCard } from "./GarmentCard"
 import { useHistory } from "react-router-dom"
-import { getAllGarments, getGarmentById } from "../../modules/GarmentManager"
+import { getAllGarments, getGarmentById, getGarmentsByUser } from "../../modules/GarmentManager"
 import "./GarmentList.css"
 
 
@@ -14,11 +14,14 @@ export const GarmentList = ({ selectedSeason, selectedType, selectedOccasion }) 
     const userId = JSON.parse(sessionStorage.getItem("app_user_id"))
 
     const getGarments = () => {
-        return getAllGarments(userId).then(garmentsFromAPI => {
+        return getGarmentsByUser(userId).then(garmentsFromAPI => {
             setGarments(garmentsFromAPI);
             setDisplayedGarments(garmentsFromAPI)
         });
     };
+
+    console.log(garments)
+
 
     useEffect(() => {
         getGarments();
