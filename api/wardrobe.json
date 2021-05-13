@@ -13,25 +13,22 @@
   ],
   "garments": [
     {
-      "userId": 2,
+      "id": 2,
       "title": "Midi Dress",
-      "imageId": 0,
-      "colorId": 4,
+      "colorId": "3",
       "seasonId": 2,
-      "brand": "Mango",
       "typeId": 7,
       "occasionId": 4,
       "composition": "100% silk",
-      "condition": 1,
-      "purchaseDateId": 4,
       "conditionId": 2,
-      "id": 2
+      "purchaseDateId": 4,
+      "brand": "Mango",
+      "userId": 1
     },
     {
       "id": 3,
       "title": "Straight Leg Jeans",
-      "imageId": 0,
-      "colorId": 5,
+      "colorId": "5",
       "seasonId": 3,
       "typeId": "6",
       "occasionId": "6",
@@ -39,12 +36,11 @@
       "conditionId": 3,
       "purchaseDateId": 4,
       "brand": "Madewell",
-      "userId": 2
+      "userId": 1
     },
     {
       "id": 4,
       "title": "Smocked Top",
-      "imageId": 0,
       "colorId": 1,
       "seasonId": 3,
       "typeId": 1,
@@ -57,22 +53,7 @@
     },
     {
       "userId": 2,
-      "title": "Black Leggings",
-      "imageId": 0,
-      "colorId": 7,
-      "seasonId": 3,
-      "brand": "GapFit",
-      "typeId": 5,
-      "occasionId": 1,
-      "composition": "90% nylon, 10% lycra",
-      "conditionId": 1,
-      "purchaseDateId": 1,
-      "id": 5
-    },
-    {
-      "userId": 2,
       "title": "Knitted Joggers",
-      "imageId": 0,
       "colorId": 5,
       "seasonId": 3,
       "brand": "outdoor voices",
@@ -86,7 +67,6 @@
     {
       "id": 7,
       "title": "Strappy Tank",
-      "imageId": 0,
       "colorId": 5,
       "seasonId": 1,
       "typeId": 1,
@@ -100,7 +80,6 @@
     {
       "userId": 2,
       "title": "Wide-cut tee",
-      "imageId": 0,
       "colorId": 2,
       "seasonId": 3,
       "brand": "RicherPoorer",
@@ -113,14 +92,13 @@
     },
     {
       "userId": 2,
-      "title": "nss tshirt",
-      "imageId": 0,
-      "colorId": 7,
-      "seasonId": 3,
-      "brand": "nss",
-      "typeId": 2,
-      "occasionId": 1,
-      "composition": "cotton",
+      "title": "TshirtDress",
+      "colorId": 4,
+      "seasonId": 1,
+      "brand": "uniqlo",
+      "typeId": 7,
+      "occasionId": 6,
+      "composition": "cotton blend",
       "conditionId": 1,
       "purchaseDateId": 1,
       "id": 9
@@ -189,35 +167,44 @@
   "types": [
     {
       "id": 1,
-      "name": "tops"
+      "name": "tops",
+      "image": "top.svg"
+
     },
     {
       "id": 2,
-      "name": "tees"
+      "name": "tees",
+      "image": "tee.svg"
     },
     {
       "id": 3,
-      "name": "shorts"
+      "name": "shorts",
+      "image": "shorts.svg"
     },
     {
       "id": 4,
-      "name": "skirts"
+      "name": "skirts",
+      "image": "skirt.svg"
     },
     {
       "id": 5,
-      "name": "pants"
+      "name": "pants",
+      "image": "pants.svg"
     },
     {
       "id": 6,
-      "name": "jeans"
+      "name": "jeans",
+      "image": "jeans.svg"
     },
     {
       "id": 7,
-      "name": "dresses"
+      "name": "dresses",
+      "image": "dress.svg"
     },
     {
       "id": 8,
-      "name": "swim"
+      "name": "swim",
+      "image": "swim.svg"
     }
   ],
   "seasons": [
