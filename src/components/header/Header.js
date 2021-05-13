@@ -97,7 +97,7 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                                         ))}
                                     </select>
                                     <select onChange={handleSeasonSelectionChange}>
-                                        <option value="0">sesason</option>
+                                        <option value="0">season</option>
                                         {seasons.map(season => (
                                             <option key={season.id} value={season.id}>
                                                 {season.name}
