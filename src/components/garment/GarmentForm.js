@@ -143,11 +143,6 @@ export const GarmentForm = () => {
                             <input type="text" id="title" placeholder="title" value={garment.title} onChange={handleControlledInputChange} />
                         </div>
                     </div>
-                    <div className="form-top-right">
-                        <select className="image-menu">
-                            <option></option>
-                        </select>
-                    </div>
                 </div>                
 
                 <div className="form-middle-border">

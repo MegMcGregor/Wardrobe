@@ -47,7 +47,7 @@ export const GarmentDetail = () => {
                         <h2>{garment.title}</h2>
                     </div>
                     <div className="detail-container-top-right">
-                        <img alt="clothing icon"></img>
+                    <img src={require(`../../../public/images/${garment.type? garment.type.image : "dress.svg"}`).default}></img>
                     </div>
                 </div>
                 <span className="line"></span>

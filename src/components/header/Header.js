@@ -71,14 +71,15 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                         <img className="logo" alt="logo" src={img} onClick={() => history.push(`/garments`)}></img>
                     </div>
                     <div className="title-container">
-                        <img className="title-header" alt="wardrobe" src={headertype}></img>
+                        {/* <img className="title-header" alt="wardrobe" src={headertype}></img> */}
+                        <h1>Wardrobe</h1>
                         <div className="nav-container">
                             <nav>
                                 <li><button type="button" className="nav-button"
                                     onClick={() => { history.push("/garments/garment-form") }}>new item</button>
                                 </li>
-                                <li><button className="nav-button">reports</button>
-                                </li>
+                                {/* <li><button className="nav-button">reports</button> */}
+                                {/* </li> */}
                                 <div className="nav-select">
                                     <select onChange={handleTypeSelectionChange}>
                                         <option value="0">type</option>

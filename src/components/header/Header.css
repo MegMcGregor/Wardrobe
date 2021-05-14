@@ -13,6 +13,14 @@
     padding: .25em;
 }
 
+h1 {
+    font-family: 'Rozha One', serif;
+    color: #42190d;
+    font-size: 5em;
+    margin: 0;
+    margin-left: 1em
+}
+
 
 /* full bottom header */
 .bottom-header {
@@ -22,7 +30,7 @@
 /* navigation and title */
 .title-container {
     align-self: center;
-    margin-top: 3em;
+    /* margin-top: 3em; */
     flex-grow: 3; 
 }
 

@@ -52,17 +52,17 @@
       "userId": 2
     },
     {
-      "userId": 2,
+      "id": 6,
       "title": "Knitted Joggers",
-      "colorId": 5,
+      "colorId": "6",
       "seasonId": 3,
-      "brand": "outdoor voices",
       "typeId": 5,
-      "occasionId": 2,
+      "occasionId": "1",
       "composition": "100% cotton",
       "conditionId": 2,
       "purchaseDateId": 2,
-      "id": 6
+      "brand": "outdoor voices",
+      "userId": 2
     },
     {
       "id": 7,
@@ -102,6 +102,62 @@
       "conditionId": 1,
       "purchaseDateId": 1,
       "id": 9
+    },
+    {
+      "userId": 2,
+      "title": "Wrap Over Dress",
+      "imageId": 0,
+      "colorId": 5,
+      "seasonId": 1,
+      "brand": "DVF",
+      "typeId": 7,
+      "occasionId": 3,
+      "composition": "100% silk",
+      "conditionId": 1,
+      "purchaseDateId": 1,
+      "id": 10
+    },
+    {
+      "userId": 2,
+      "title": "Denim Shorts",
+      "imageId": 0,
+      "colorId": 5,
+      "seasonId": 1,
+      "brand": "Joes Jeans",
+      "typeId": 3,
+      "occasionId": 6,
+      "composition": "denim",
+      "conditionId": 2,
+      "purchaseDateId": 1,
+      "id": 11
+    },
+    {
+      "userId": 2,
+      "title": "Scallop Edge Swimsuit",
+      "imageId": 0,
+      "colorId": 7,
+      "seasonId": 1,
+      "brand": "Mango",
+      "typeId": 8,
+      "occasionId": 6,
+      "composition": "95% polyamide,5% elastane",
+      "conditionId": 3,
+      "purchaseDateId": 2,
+      "id": 12
+    },
+    {
+      "userId": 2,
+      "title": "Mohair Sweater",
+      "imageId": 0,
+      "colorId": 4,
+      "seasonId": 2,
+      "brand": "Rag & Bone",
+      "typeId": 1,
+      "occasionId": 6,
+      "composition": "100% wool",
+      "conditionId": 3,
+      "purchaseDateId": 5,
+      "id": 13
     }
   ],
   "colors": [
@@ -169,7 +225,6 @@
       "id": 1,
       "name": "tops",
       "image": "top.svg"
-
     },
     {
       "id": 2,
