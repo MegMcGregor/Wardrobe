@@ -7,6 +7,7 @@ import { getAllOccasions } from "../../modules/OccasionManager"
 import { getAllConditions } from "../../modules/ConditionManager"
 import { getAllSeasons } from "../../modules/SeasonManager"
 import { getAllPurchaseDates } from '../../modules/DateManager'
+import { Link } from "react-router-dom"
 import "./GarmentForm.css"
 
 export const GarmentForm = () => {
@@ -216,7 +217,9 @@ export const GarmentForm = () => {
                 </div>
 
                 <div className="form-footer-border">
+                    <Link to={`/garments`}>
                     <button>back</button>
+                    </Link>
                     <button className="form-save" onClick={handleClickSaveGarment}>save</button>
                 </div>
 

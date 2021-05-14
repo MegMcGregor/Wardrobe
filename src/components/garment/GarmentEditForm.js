@@ -123,9 +123,6 @@ export const GarmentEditForm = () => {
                         </div>
                     </div>
                     <div className="form-top-right">
-                        <select className="image-menu">
-                            <option></option>
-                        </select>
                     </div>
                 </div>
 
