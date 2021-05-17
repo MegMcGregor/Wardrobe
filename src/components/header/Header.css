@@ -13,15 +13,6 @@
     padding: .25em;
 }
 
-h1 {
-    font-family: 'Rozha One', serif;
-    color: #42190d;
-    font-size: 5.5em;
-    margin: 0;
-    margin-left: 1.25em
-}
-
-
 /* full bottom header */
 .bottom-header {
     display: flex;
@@ -29,6 +20,7 @@ h1 {
 
 /* navigation and title */
 .title-container {
+    margin-left: 4em;
     align-self: center;
     flex-grow: 3; 
 }
@@ -46,14 +38,14 @@ h1 {
 }
 
 .logo:hover {
-    border: #C2EB98 2px solid
+    border: #d9e76c 2px solid
 }
 
 /* title image */
 .title-header {
-    height: 6em;
-    margin: .5em 7em;
-    width: auto;
+    margin-top: 1em;
+    margin-left: 3em;
+    width: 60%;
 }
 
 .nav-button {
@@ -94,11 +86,11 @@ select {
 }
 
 select:hover {
-   border: #C2EB98 2px solid
+   border: #d9e76c 2px solid
 }
       
 button:hover {
-    border: #C2EB98 2px solid
+    border: #d9e76c 2px solid
 }
 
 a {
@@ -107,7 +99,7 @@ a {
 }
 
 a:hover {
-    color: #C2EB98;
+    color: #d9e76c;
     cursor: pointer;
 }
 

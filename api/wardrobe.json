@@ -41,11 +41,11 @@
     {
       "id": 4,
       "title": "Smocked Top",
-      "colorId": 6,
+      "colorId": 2,
       "seasonId": 1,
       "typeId": 2,
       "occasionId": 3,
-      "composition": null,
+      "composition": "",
       "conditionId": 3,
       "purchaseDateId": 9,
       "brand": "CurrentElliot",
