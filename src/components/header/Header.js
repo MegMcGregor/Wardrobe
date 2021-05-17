@@ -6,7 +6,7 @@ import { getAllSeasons } from "../../modules/SeasonManager"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import img from "./Wardrobe.png"
-import headertype from "../images/headertype.png"
+import headertype from "../images/headertype.svg"
 
 export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion, clearUser, isAuthenticated }) => {
     const [types, setTypes] = useState([]);
@@ -71,8 +71,8 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                         <img className="logo" alt="logo" src={img} onClick={() => history.push(`/garments`)}></img>
                     </div>
                     <div className="title-container">
-                        {/* <img className="title-header" alt="wardrobe" src={headertype}></img> */}
-                        <h1>Wardrobe</h1>
+                        <img className="title-header" alt="wardrobe" src={headertype}></img>
+                        {/* <h1>Wardrobe</h1> */}
                         <div className="nav-container">
                             <nav>
                                 <li><button type="button" className="nav-button"
