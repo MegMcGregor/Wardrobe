@@ -9,7 +9,7 @@
 }
 
 .red-dot {
-    background-color: #D90A27;
+    background-color: #ff7075;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -19,7 +19,7 @@
 }
 
 .orange-dot {
-    background-color: #F46124;
+    background-color: #ff9a5c;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -30,7 +30,7 @@
 }
 
 .yellow-dot {
-    background-color: #F3C70D;
+    background-color: #ffd970;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -42,7 +42,7 @@
 
 
 .green-dot {
-    background-color: #017E3D;
+    background-color: #b3e85e;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -54,7 +54,7 @@
 
 
 .blue-dot {
-    background-color: #0841B6;
+    background-color: #57b5ef;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -66,7 +66,7 @@
 
 
 .purple-dot {
-    background-color: #A4047C;
+    background-color: #a786d5;
     height: 20px;
     width: 20px;
     border-radius: 50%;

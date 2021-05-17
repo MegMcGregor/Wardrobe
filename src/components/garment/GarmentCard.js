@@ -21,7 +21,7 @@ export const GarmentCard = ({ garment }) => {
             </div>
             <div className="card-bottom-border">
             <Link to={`/garments/${garment.id}`}>
-                <button>details</button>
+                <button className="details-button">details</button>
             </Link>
             </div>
         </div>

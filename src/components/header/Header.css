@@ -16,9 +16,9 @@
 h1 {
     font-family: 'Rozha One', serif;
     color: #42190d;
-    font-size: 5em;
+    font-size: 5.5em;
     margin: 0;
-    margin-left: 1em
+    margin-left: 1.25em
 }
 
 
@@ -30,7 +30,6 @@ h1 {
 /* navigation and title */
 .title-container {
     align-self: center;
-    /* margin-top: 3em; */
     flex-grow: 3; 
 }
 
@@ -52,7 +51,7 @@ h1 {
 
 /* title image */
 .title-header {
-    height: 5em;
+    height: 6em;
     margin: .5em 7em;
     width: auto;
 }
