@@ -44,7 +44,7 @@ export const GarmentEditForm = () => {
             seasonId: +garment.seasonId,
             typeId: +garment.typeId,
             occasionId: +garment.occasionId,
-            composition: +garment.composition,
+            composition: garment.composition,
             conditionId: +garment.conditionId,
             purchaseDateId: +garment.purchaseDateId,
             brand: garment.brand,

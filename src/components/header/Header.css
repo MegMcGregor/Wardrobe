@@ -38,7 +38,7 @@
 }
 
 .logo:hover {
-    border: #C2EB98 2px solid
+    border: #d9e76c 2px solid
 }
 
 /* title image */
@@ -86,11 +86,11 @@ select {
 }
 
 select:hover {
-   border: #C2EB98 2px solid
+   border: #d9e76c 2px solid
 }
       
 button:hover {
-    border: #C2EB98 2px solid
+    border: #d9e76c 2px solid
 }
 
 a {
@@ -99,7 +99,7 @@ a {
 }
 
 a:hover {
-    color: #C2EB98;
+    color: #d9e76c;
     cursor: pointer;
 }
 

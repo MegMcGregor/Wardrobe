@@ -80,7 +80,7 @@ button {
 
 
 .red {
-    background-color: #D90A27;
+    background-color:#cc0000 ;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -91,7 +91,8 @@ button {
 }
 
 .orange {
-    background-color: #F46124;
+    background-color: #e69138
+    ;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -103,7 +104,8 @@ button {
 }
 
 .yellow {
-    background-color: #F3C70D;
+    background-color:#f1c232
+    ;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -116,7 +118,8 @@ button {
 
 
 .green {
-    background-color: #017E3D;
+    background-color:#6aa84f
+    ;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -129,7 +132,7 @@ button {
 
 
 .blue {
-    background-color: #0841B6;
+    background-color:#3d85c6;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -142,7 +145,7 @@ button {
 
 
 .purple {
-    background-color: #A4047C;
+    background-color: #674ea7;
     opacity: .8;
     height: 1em;
     width: 1em;
