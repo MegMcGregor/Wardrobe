@@ -13,9 +13,8 @@ import { getAllPurchaseDates } from '../../modules/DateManager'
 export const GarmentEditForm = () => {
     const [garment, setGarment] = useState({ title: "", composition: "", brand: "" });
     const [isLoading, setIsLoading] = useState(false);
-    const [images, setImages] = useState([]);
     const [colors, setColors] = useState([]);
-    const [selectedColor, setSelectedColor] = useState([]);
+    const [newSelectedColor, setNewSelectedColor] = useState([]);
     const [types, setTypes] = useState([]);
     const [occasions, setOccasions] = useState([]);
     const [purchaseDates, setPurchaseDates] = useState([])
@@ -27,8 +26,19 @@ export const GarmentEditForm = () => {
     const handleFieldChange = (event) => {
         event.preventDefault()
         const stateToChange = { ...garment };
-        stateToChange[event.target.id] = event.target.value;
-        setGarment(stateToChange);
+
+        if (event.target.id.includes("colorId")) {
+            stateToChange.colorId = event.target.value
+            let newSelectedColor = event.target.className
+            setNewSelectedColor(newSelectedColor)
+            console.log(newSelectedColor)
+            setGarment(stateToChange)
+        }
+
+        else {
+            stateToChange[event.target.id] = event.target.value;
+            setGarment(stateToChange);
+        }
     }
 
 
@@ -55,6 +65,7 @@ export const GarmentEditForm = () => {
             .then(() => history.push("/garments")
             )
     }
+
     useEffect(() => {
         getGarmentById(garmentId)
             .then(garment => {
@@ -117,7 +128,7 @@ export const GarmentEditForm = () => {
             <form className="form-border">
                 <div className="form-header-border">
                     <div className="form-top-left">
-                        <span className="header-dot" id={selectedColor}></span>
+                        <span className={newSelectedColor}></span>
                         <div className="title-input">
                             <input type="text" id="title" placeholder="title" value={garment.title} onChange={handleFieldChange} />
                         </div>
@@ -128,14 +139,14 @@ export const GarmentEditForm = () => {
 
                 <div className="form-middle-border">
                     <div className="color-container">
-                        <button value="1" id="colorId" className="red-dot" onClick={handleFieldChange}></button>
-                        <button value="2" id="colorId" className="orange-dot" onClick={handleFieldChange}></button>
-                        <button value="3" id="colorId" className="yellow-dot" onClick={handleFieldChange}></button>
-                        <button value="4" id="colorId" className="green-dot" onClick={handleFieldChange}></button>
-                        <button value="5" id="colorId" className="blue-dot" onClick={handleFieldChange} ></button>
-                        <button value="6" id="colorId" className="purple-dot" onClick={handleFieldChange}></button>
-                        <button value="7" id="colorId" className="black-dot" onClick={handleFieldChange}></button>
-                        <button value="8" id="colorId" className="white-dot" onClick={handleFieldChange} ></button>
+                        <button value="1" id="colorId-1" className="red-dot" onClick={handleFieldChange}></button>
+                        <button value="2" id="colorId-2" className="orange-dot" onClick={handleFieldChange}></button>
+                        <button value="3" id="colorId-3" className="yellow-dot" onClick={handleFieldChange}></button>
+                        <button value="4" id="colorId-4" className="green-dot" onClick={handleFieldChange}></button>
+                        <button value="5" id="colorId-5" className="blue-dot" onClick={handleFieldChange} ></button>
+                        <button value="6" id="colorId-6" className="purple-dot" onClick={handleFieldChange}></button>
+                        <button value="7" id="colorId-7" className="black-dot" onClick={handleFieldChange}></button>
+                        <button value="8" id="colorId-8" className="white-dot" onClick={handleFieldChange} ></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>
@@ -197,7 +208,7 @@ export const GarmentEditForm = () => {
                 </div>
 
                 <div className="form-footer-border">
-              <Link to to={"/garments"}><button>back</button></Link>
+                    <Link to to={"/garments"}><button>back</button></Link>
                     <button className="form-save" onClick={updateExistingGarment}>save</button>
                 </div>
 
