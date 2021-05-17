@@ -22,9 +22,6 @@ export const GarmentDetail = () => {
             });
     }, [garmentId]);
 
-    console.log(garment)
-
-
     const handleDeleteGarment = (id) => {
         deleteGarment(id)
         .then(()=>history.push(`/garments`))

@@ -20,8 +20,6 @@ export const GarmentList = ({ selectedSeason, selectedType, selectedOccasion }) 
         });
     };
 
-    console.log(garments)
-
 
     useEffect(() => {
         getGarments();

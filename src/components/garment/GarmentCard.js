@@ -14,8 +14,8 @@ export const GarmentCard = ({ garment }) => {
                 <span className={garment.color.name}></span>
             </div>
             <div className="card-middle-border">
-                <h3>{garment.title}</h3>
-                <ul>
+                <h3 className="cardTitle">{garment.title}</h3>
+                <ul className="garmentCardList">
                 <li>{garment.composition}</li>
                 </ul>
             </div>
