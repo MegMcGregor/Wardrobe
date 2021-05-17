@@ -52,11 +52,16 @@ export const GarmentForm = () => {
 
         setSelectedColor(selectedColor)
 
-        newGarment[event.target.id] = selectedVal
-        setGarment(newGarment)
-    }
+        if (event.target.id.includes("colorId")) {
+            newGarment.colorId = selectedVal
+            setGarment(newGarment)
+        }
 
-    console.log(garment)
+        else {
+            newGarment[event.target.id] = selectedVal
+            setGarment(newGarment)
+        }
+    }
 
 
 
@@ -148,14 +153,14 @@ export const GarmentForm = () => {
 
                 <div className="form-middle-border">
                     <div className="color-container">
-                        <button value="1" id="colorId" className="red-dot" onClick={handleControlledInputChange}></button>
-                        <button value="2" id="colorId" className="orange-dot" onClick={handleControlledInputChange}></button>
-                        <button value="3" id="colorId" className="yellow-dot" onClick={handleControlledInputChange}></button>
-                        <button value="4" id="colorId" className="green-dot" onClick={handleControlledInputChange}></button>
-                        <button value="5" id="colorId" className="blue-dot" onClick={handleControlledInputChange} ></button>
-                        <button value="6" id="colorId" className="purple-dot" onClick={handleControlledInputChange}></button>
-                        <button value="7" id="colorId" className="black-dot" onClick={handleControlledInputChange}></button>
-                        <button value="8" id="colorId" className="white-dot" onClick={handleControlledInputChange} ></button>
+                        <button value="1" id="colorId-1" className="red-dot" onClick={handleControlledInputChange}></button>
+                        <button value="2" id="colorId-2" className="orange-dot" onClick={handleControlledInputChange}></button>
+                        <button value="3" id="colorId-3" className="yellow-dot" onClick={handleControlledInputChange}></button>
+                        <button value="4" id="colorId-4" className="green-dot" onClick={handleControlledInputChange}></button>
+                        <button value="5" id="colorId-5" className="blue-dot" onClick={handleControlledInputChange} ></button>
+                        <button value="6" id="colorId-6" className="purple-dot" onClick={handleControlledInputChange}></button>
+                        <button value="7" id="colorId-7" className="black-dot" onClick={handleControlledInputChange}></button>
+                        <button value="8" id="colorId-8" className="white-dot" onClick={handleControlledInputChange} ></button>
                     </div>
                     <div className="form-group">
                         <label htmlFor="brand-name-input">brand:</label>

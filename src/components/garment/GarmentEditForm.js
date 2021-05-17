@@ -40,15 +40,15 @@ export const GarmentEditForm = () => {
             id: garmentId,
             title: garment.title,
             imageId: garment.imageId,
-            colorId: garment.colorId,
-            seasonId: garment.seasonId,
-            typeId: garment.typeId,
-            occasionId: garment.occasionId,
-            composition: garment.composition,
-            conditionId: garment.conditionId,
-            purchaseDateId: garment.purchaseDateId,
+            colorId: +garment.colorId,
+            seasonId: +garment.seasonId,
+            typeId: +garment.typeId,
+            occasionId: +garment.occasionId,
+            composition: +garment.composition,
+            conditionId: +garment.conditionId,
+            purchaseDateId: +garment.purchaseDateId,
             brand: garment.brand,
-            userId: garment.userId
+            userId: +garment.userId
         }
 
         updateGarment(editedGarment)
