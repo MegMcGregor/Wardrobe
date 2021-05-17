@@ -6,8 +6,17 @@
 	font-size: .8em;
 }
 
+.card-middle-border {
+    margin-left: 1em;
+}
+
+.details-button {
+    width: 100%
+}
+
 img {
     width: 4em;
+    margin: 0;
 }
 
 .card-border {
@@ -21,14 +30,15 @@ img {
     border-style: solid;
 }
 
+
+
 .card-top-border img {
     float: right;
     margin: 1em;
 }
 
-.card-top-border span {
-    float: left;
-    margin: 1em;
+.card-top-border {
+    height: 50px;
 }
 
 .card-bottom-border {
@@ -38,7 +48,7 @@ img {
 }
 
 .red {
-    background-color: #D90A27;
+    background-color: #ff7075;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -49,7 +59,7 @@ img {
 }
 
 .orange {
-    background-color: #F46124;
+    background-color: #ff9a5c;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -61,7 +71,7 @@ img {
 }
 
 .yellow {
-    background-color: #F3C70D;
+    background-color: #ffd970;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -74,7 +84,7 @@ img {
 
 
 .green {
-    background-color: #017E3D;
+    background-color: #b3e85e;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -87,7 +97,7 @@ img {
 
 
 .blue {
-    background-color: #0841B6;
+    background-color: #57b5ef;
     opacity: .8;
     height: 1em;
     width: 1em;
@@ -100,7 +110,7 @@ img {
 
 
 .purple {
-    background-color: #A4047C;
+    background-color: #a786d5;
     opacity: .8;
     height: 1em;
     width: 1em;
