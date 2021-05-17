@@ -63,7 +63,7 @@ export const GarmentDetail = () => {
 
                 <div className="detail-footer-border">
                     <div className="detail-container-bottom-left">
-                    <button onClick={() => history.goBack()}>Back</button>
+                    <button onClick={() => history.goBack()}>back</button>
                     </div>
                     <div className="detail-container-bottom-right">
                         <button type="button"

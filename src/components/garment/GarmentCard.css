@@ -9,6 +9,13 @@
     font-size: large;
 }
 
+.details-button {
+    padding: .5em;
+    margin: .25em;
+    width: 125px;
+    padding: 0;
+}
+
 img {
     width: 4em;
 }
