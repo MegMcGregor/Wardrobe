@@ -78,8 +78,6 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                                 <li><button type="button" className="nav-button"
                                     onClick={() => { history.push("/garments/garment-form") }}>new item</button>
                                 </li>
-                                {/* <li><button className="nav-button">reports</button> */}
-                                {/* </li> */}
                                 <div className="nav-select">
                                     <select onChange={handleTypeSelectionChange}>
                                         <option value="0">type</option>
