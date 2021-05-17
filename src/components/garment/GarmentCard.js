@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 export const GarmentCard = ({ garment }) => {
 
-    console.log(garment)
-
     return (
         <>
         <div className="card-border">

@@ -41,12 +41,12 @@
     {
       "id": 4,
       "title": "Smocked Top",
-      "colorId": 2,
+      "colorId": 7,
       "seasonId": 1,
       "typeId": 2,
       "occasionId": 3,
       "composition": "",
-      "conditionId": 3,
+      "conditionId": 4,
       "purchaseDateId": 9,
       "brand": "CurrentElliot",
       "userId": 2
@@ -186,6 +186,20 @@
       "purchaseDateId": 8,
       "brand": "DVF",
       "userId": 2
+    },
+    {
+      "userId": 2,
+      "title": "",
+      "imageId": 0,
+      "colorId": 1,
+      "seasonId": 1,
+      "brand": "Rebecca Taylor",
+      "typeId": 1,
+      "occasionId": 4,
+      "composition": "100% silk",
+      "conditionId": 2,
+      "purchaseDateId": 2,
+      "id": 16
     }
   ],
   "colors": [

@@ -43,24 +43,26 @@ export const GarmentForm = () => {
     const handleControlledInputChange = (event) => {
         event.preventDefault()
         const newGarment = { ...garment }
-        let selectedColor = event.target.className
         let selectedVal = event.target.value
 
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
 
-        setSelectedColor(selectedColor)
-
         if (event.target.id.includes("colorId")) {
             newGarment.colorId = selectedVal
+            let selectedColor = event.target.className
+            setSelectedColor(selectedColor)
             setGarment(newGarment)
+            console.log(selectedColor)
         }
 
         else {
             newGarment[event.target.id] = selectedVal
             setGarment(newGarment)
         }
+
+
     }
 
 
