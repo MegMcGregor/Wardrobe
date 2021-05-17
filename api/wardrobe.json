@@ -158,6 +158,20 @@
       "conditionId": 3,
       "purchaseDateId": 5,
       "id": 13
+    },
+    {
+      "id": 14,
+      "title": "sweater",
+      "imageId": 0,
+      "colorId": "5",
+      "seasonId": 3,
+      "typeId": 2,
+      "occasionId": 1,
+      "composition": "cotton blend",
+      "conditionId": 2,
+      "purchaseDateId": 1,
+      "brand": "hanes",
+      "userId": 2
     }
   ],
   "colors": [
