@@ -7,6 +7,7 @@ import { getAllSeasons } from "../modules/SeasonManager"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { Header } from "./header/Header.js"
+import { Footer } from "./footer/Footer.js"
 
 export const Wardrobe = () => {
 
@@ -71,6 +72,7 @@ export const Wardrobe = () => {
                   selectedSeason={selectedSeason}
                   selectedType={selectedType}
                   selectedOccasion={selectedOccasion} />
+                  <Footer></Footer>
               </>
             )
           } else {

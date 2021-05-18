@@ -146,20 +146,6 @@
       "id": 12
     },
     {
-      "userId": 2,
-      "title": "Mohair Sweater",
-      "imageId": 0,
-      "colorId": 4,
-      "seasonId": 2,
-      "brand": "Rag & Bone",
-      "typeId": 1,
-      "occasionId": 6,
-      "composition": "100% wool",
-      "conditionId": 3,
-      "purchaseDateId": 5,
-      "id": 13
-    },
-    {
       "id": 14,
       "title": "sweater",
       "imageId": 0,

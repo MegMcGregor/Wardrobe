@@ -72,7 +72,6 @@ export const Header = ({ setSelectedSeason, setSelectedType, setSelectedOccasion
                     </div>
                     <div className="title-container">
                         <img className="title-header" alt="wardrobe" src={headertype}></img>
-                        {/* <h1>Wardrobe</h1> */}
                         <div className="nav-container">
                             <nav>
                                 <li><button type="button" className="nav-button"
